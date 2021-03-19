@@ -1,0 +1,76 @@
+body {
+  font-family: Verdana;
+}
+
+.header {
+  font-family: Verdana;
+  max-width: 800px;
+  font-size: 50px;
+  line-height: 38px;
+  letter-spacing: -5px;
+  font-weight: 549;
+  display: inline;
+  color: #7a7a7a;
+}
+
+/* Makes sure that all content is in the middle */
+.content {
+  width: 810px;
+  margin: auto;
+  background: white
+  padding: 10px;
+  /*white-space: nowrap;*/
+}
+
+.text-box{
+width:767px;
+border-style:solid;  
+border-color: grey;
+border-width: 2px;
+padding-left:10px;
+}
+
+.landingimage {
+  float: none;
+  height: 90px;
+  vertical-align: sub;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  width:800px;
+  background-color: #75aadb;
+  border-style: hidden;
+  overflow: hidden;
+  /* padding-left: 0px; */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  width:80px;
+  text-align: center;
+  border-style: solid;
+  border-width: 10px; /* Sets top border from other element*/
+  border-left-width:0px;
+  border-right-width:20px;
+  float: left;
+  color: #ffffff;
+  letter-spacing: -1px;
+  text-align: center;
+  padding: 5px 30px 5px 30px;  /* Sets top border for each box */
+  text-decoration: none;
+  font-size: 110%;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  /*color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4caf50;
+  color: white;
+}
