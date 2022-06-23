@@ -1,0 +1,42 @@
+// Importing Custom Fonts
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// Change body font family
+$font-family-base: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Change headings font family
+$headings-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Change navbar font color for light background
+$navbar-light-color: #000000;
+
+// Change navbar font and make everything uppercase
+.navbar{
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+// Custom padding
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-spacers: (
+    6: $spacer * 4, // spacer = 1rem 
+    7: $spacer * 5, // spacer = 1rem 
+);
+
+//Custom showcase text size
+.showcase-text{
+    font-size: $font-size-base * 1.15;
+}
+
+$spacers: map-merge($custom-spacers, $spacers);
+
+// Custom container-fluid to stretch 100% of height
+.container-fluid{
+    min-height: 100%;
+}
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
