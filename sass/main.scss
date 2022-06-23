@@ -33,10 +33,5 @@ $custom-spacers: (
 
 $spacers: map-merge($custom-spacers, $spacers);
 
-// Custom container-fluid to stretch 100% of height
-.container-fluid{
-    min-height: 100%;
-}
-
 // Import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";

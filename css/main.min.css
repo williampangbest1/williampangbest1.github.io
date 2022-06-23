@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);.navbar{font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;text-transform:uppercase}.showcase-text{font-size:1.15rem}.container-fluid,.container-sm,.container-md,.container-lg,.container-xl,.container-xxl{min-height:100%}/*!
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);.navbar{font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;text-transform:uppercase}.showcase-text{font-size:1.15rem}.container-fluid,.container-sm,.container-md,.container-lg,.container-xl,.container-xxl{height:100%}body{width:100%;height:100%}/*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
