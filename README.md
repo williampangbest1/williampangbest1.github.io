@@ -1,2 +1,1 @@
-# williampangbest1.github.io
-Personal website
+Welcome to my personal [website](https://williampangbest1.github.io). My name is Will, and I am currently a graduate student at Yale University, working on the intersection of **data science**, **statistics**, and **epidemiology**. I'm skilled in both Python and R, and I dabble a bit with visualization using Javascript. Before Yale, I was a bioengineering major at McGill University, with multiple years of wetlab and coding experience.
