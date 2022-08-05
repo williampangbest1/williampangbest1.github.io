@@ -14075,7 +14075,7 @@ This is the part where we make predictions, and iteratively make changes to our 
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Case 1</span>
-<span class="k">class</span> <span class="nc">printmeplease</span><span class="p">(</span><span class="n">HyperParameters</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">printmeplease</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_word</span><span class="p">,</span> <span class="n">second_word</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_word</span> <span class="o">=</span> <span class="n">first_word</span> <span class="c1"># Defining it as class attribute</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">second_word</span> <span class="o">=</span> <span class="n">second_word</span> <span class="c1"># Also defining it as a class attribute</span>
@@ -14421,7 +14421,7 @@ First entry of labels: tensor([5.5020])
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">HyperParameters</span><span class="p">):</span>
@@ -14457,7 +14457,7 @@ First entry of labels: tensor([5.5020])
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SGD</span><span class="p">(</span><span class="n">HyperParameters</span><span class="p">):</span>
@@ -14484,7 +14484,7 @@ First entry of labels: tensor([5.5020])
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grab data</span>
@@ -14522,9 +14522,2529 @@ First entry of labels: tensor([5.5020])
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Estimated w: tensor([[ 2.0010],
-        [-3.3947]], requires_grad=True) 
- Estimated b: tensor([4.2016], requires_grad=True)
+<pre>Params are: [tensor([[ 0.0212],
+        [-0.0603]], requires_grad=True), tensor([0.], requires_grad=True)]
+Params are: [tensor([[ 0.1136],
+        [-0.1567]], requires_grad=True), tensor([0.], requires_grad=True)]
+Params are: [tensor([[ 0.1136],
+        [-0.1567]], requires_grad=True), tensor([0.1524], requires_grad=True)]
+Params are: [tensor([[ 0.2197],
+        [-0.2927]], requires_grad=True), tensor([0.1524], requires_grad=True)]
+Params are: [tensor([[ 0.2197],
+        [-0.2927]], requires_grad=True), tensor([0.3012], requires_grad=True)]
+Params are: [tensor([[ 0.2825],
+        [-0.4177]], requires_grad=True), tensor([0.3012], requires_grad=True)]
+Params are: [tensor([[ 0.2825],
+        [-0.4177]], requires_grad=True), tensor([0.4319], requires_grad=True)]
+Params are: [tensor([[ 0.2982],
+        [-0.5091]], requires_grad=True), tensor([0.4319], requires_grad=True)]
+Params are: [tensor([[ 0.2982],
+        [-0.5091]], requires_grad=True), tensor([0.5469], requires_grad=True)]
+Params are: [tensor([[ 0.3679],
+        [-0.5783]], requires_grad=True), tensor([0.5469], requires_grad=True)]
+Params are: [tensor([[ 0.3679],
+        [-0.5783]], requires_grad=True), tensor([0.6525], requires_grad=True)]
+Params are: [tensor([[ 0.4313],
+        [-0.6848]], requires_grad=True), tensor([0.6525], requires_grad=True)]
+Params are: [tensor([[ 0.4313],
+        [-0.6848]], requires_grad=True), tensor([0.7771], requires_grad=True)]
+Params are: [tensor([[ 0.4867],
+        [-0.7564]], requires_grad=True), tensor([0.7771], requires_grad=True)]
+Params are: [tensor([[ 0.4867],
+        [-0.7564]], requires_grad=True), tensor([0.8854], requires_grad=True)]
+Params are: [tensor([[ 0.5203],
+        [-0.8432]], requires_grad=True), tensor([0.8854], requires_grad=True)]
+Params are: [tensor([[ 0.5203],
+        [-0.8432]], requires_grad=True), tensor([1.0026], requires_grad=True)]
+Params are: [tensor([[ 0.5721],
+        [-0.9463]], requires_grad=True), tensor([1.0026], requires_grad=True)]
+Params are: [tensor([[ 0.5721],
+        [-0.9463]], requires_grad=True), tensor([1.0945], requires_grad=True)]
+Params are: [tensor([[ 0.6086],
+        [-0.9893]], requires_grad=True), tensor([1.0945], requires_grad=True)]
+Params are: [tensor([[ 0.6086],
+        [-0.9893]], requires_grad=True), tensor([1.1886], requires_grad=True)]
+Params are: [tensor([[ 0.6705],
+        [-1.0843]], requires_grad=True), tensor([1.1886], requires_grad=True)]
+Params are: [tensor([[ 0.6705],
+        [-1.0843]], requires_grad=True), tensor([1.2788], requires_grad=True)]
+Params are: [tensor([[ 0.6835],
+        [-1.1615]], requires_grad=True), tensor([1.2788], requires_grad=True)]
+Params are: [tensor([[ 0.6835],
+        [-1.1615]], requires_grad=True), tensor([1.3767], requires_grad=True)]
+Params are: [tensor([[ 0.7376],
+        [-1.2327]], requires_grad=True), tensor([1.3767], requires_grad=True)]
+Params are: [tensor([[ 0.7376],
+        [-1.2327]], requires_grad=True), tensor([1.4864], requires_grad=True)]
+Params are: [tensor([[ 0.7880],
+        [-1.2842]], requires_grad=True), tensor([1.4864], requires_grad=True)]
+Params are: [tensor([[ 0.7880],
+        [-1.2842]], requires_grad=True), tensor([1.5581], requires_grad=True)]
+Params are: [tensor([[ 0.8576],
+        [-1.3110]], requires_grad=True), tensor([1.5581], requires_grad=True)]
+Params are: [tensor([[ 0.8576],
+        [-1.3110]], requires_grad=True), tensor([1.6467], requires_grad=True)]
+Params are: [tensor([[ 0.8721],
+        [-1.3506]], requires_grad=True), tensor([1.6467], requires_grad=True)]
+Params are: [tensor([[ 0.8721],
+        [-1.3506]], requires_grad=True), tensor([1.7193], requires_grad=True)]
+Params are: [tensor([[ 0.9052],
+        [-1.4159]], requires_grad=True), tensor([1.7193], requires_grad=True)]
+Params are: [tensor([[ 0.9052],
+        [-1.4159]], requires_grad=True), tensor([1.8021], requires_grad=True)]
+Params are: [tensor([[ 0.9461],
+        [-1.4920]], requires_grad=True), tensor([1.8021], requires_grad=True)]
+Params are: [tensor([[ 0.9461],
+        [-1.4920]], requires_grad=True), tensor([1.8817], requires_grad=True)]
+Params are: [tensor([[ 0.9685],
+        [-1.5797]], requires_grad=True), tensor([1.8817], requires_grad=True)]
+Params are: [tensor([[ 0.9685],
+        [-1.5797]], requires_grad=True), tensor([1.9652], requires_grad=True)]
+Params are: [tensor([[ 1.0093],
+        [-1.6185]], requires_grad=True), tensor([1.9652], requires_grad=True)]
+Params are: [tensor([[ 1.0093],
+        [-1.6185]], requires_grad=True), tensor([2.0292], requires_grad=True)]
+Params are: [tensor([[ 1.0218],
+        [-1.6533]], requires_grad=True), tensor([2.0292], requires_grad=True)]
+Params are: [tensor([[ 1.0218],
+        [-1.6533]], requires_grad=True), tensor([2.0801], requires_grad=True)]
+Params are: [tensor([[ 1.0715],
+        [-1.7107]], requires_grad=True), tensor([2.0801], requires_grad=True)]
+Params are: [tensor([[ 1.0715],
+        [-1.7107]], requires_grad=True), tensor([2.1207], requires_grad=True)]
+Params are: [tensor([[ 1.1069],
+        [-1.7543]], requires_grad=True), tensor([2.1207], requires_grad=True)]
+Params are: [tensor([[ 1.1069],
+        [-1.7543]], requires_grad=True), tensor([2.1891], requires_grad=True)]
+Params are: [tensor([[ 1.1377],
+        [-1.7851]], requires_grad=True), tensor([2.1891], requires_grad=True)]
+Params are: [tensor([[ 1.1377],
+        [-1.7851]], requires_grad=True), tensor([2.2453], requires_grad=True)]
+Params are: [tensor([[ 1.1704],
+        [-1.8493]], requires_grad=True), tensor([2.2453], requires_grad=True)]
+Params are: [tensor([[ 1.1704],
+        [-1.8493]], requires_grad=True), tensor([2.3019], requires_grad=True)]
+Params are: [tensor([[ 1.2077],
+        [-1.9085]], requires_grad=True), tensor([2.3019], requires_grad=True)]
+Params are: [tensor([[ 1.2077],
+        [-1.9085]], requires_grad=True), tensor([2.3558], requires_grad=True)]
+Params are: [tensor([[ 1.2197],
+        [-1.9307]], requires_grad=True), tensor([2.3558], requires_grad=True)]
+Params are: [tensor([[ 1.2197],
+        [-1.9307]], requires_grad=True), tensor([2.4006], requires_grad=True)]
+Params are: [tensor([[ 1.2491],
+        [-1.9907]], requires_grad=True), tensor([2.4006], requires_grad=True)]
+Params are: [tensor([[ 1.2491],
+        [-1.9907]], requires_grad=True), tensor([2.4647], requires_grad=True)]
+Params are: [tensor([[ 1.2743],
+        [-2.0375]], requires_grad=True), tensor([2.4647], requires_grad=True)]
+Params are: [tensor([[ 1.2743],
+        [-2.0375]], requires_grad=True), tensor([2.5018], requires_grad=True)]
+Params are: [tensor([[ 1.2838],
+        [-2.0637]], requires_grad=True), tensor([2.5018], requires_grad=True)]
+Params are: [tensor([[ 1.2838],
+        [-2.0637]], requires_grad=True), tensor([2.5505], requires_grad=True)]
+Params are: [tensor([[ 1.3173],
+        [-2.1065]], requires_grad=True), tensor([2.5505], requires_grad=True)]
+Params are: [tensor([[ 1.3173],
+        [-2.1065]], requires_grad=True), tensor([2.6016], requires_grad=True)]
+Params are: [tensor([[ 1.3344],
+        [-2.1465]], requires_grad=True), tensor([2.6016], requires_grad=True)]
+Params are: [tensor([[ 1.3344],
+        [-2.1465]], requires_grad=True), tensor([2.6598], requires_grad=True)]
+Params are: [tensor([[ 1.3516],
+        [-2.1962]], requires_grad=True), tensor([2.6598], requires_grad=True)]
+Params are: [tensor([[ 1.3516],
+        [-2.1962]], requires_grad=True), tensor([2.7111], requires_grad=True)]
+Params are: [tensor([[ 1.3656],
+        [-2.2245]], requires_grad=True), tensor([2.7111], requires_grad=True)]
+Params are: [tensor([[ 1.3656],
+        [-2.2245]], requires_grad=True), tensor([2.7625], requires_grad=True)]
+Params are: [tensor([[ 1.3778],
+        [-2.2445]], requires_grad=True), tensor([2.7625], requires_grad=True)]
+Params are: [tensor([[ 1.3778],
+        [-2.2445]], requires_grad=True), tensor([2.8005], requires_grad=True)]
+Params are: [tensor([[ 1.3988],
+        [-2.2668]], requires_grad=True), tensor([2.8005], requires_grad=True)]
+Params are: [tensor([[ 1.3988],
+        [-2.2668]], requires_grad=True), tensor([2.8432], requires_grad=True)]
+Params are: [tensor([[ 1.4057],
+        [-2.2930]], requires_grad=True), tensor([2.8432], requires_grad=True)]
+Params are: [tensor([[ 1.4057],
+        [-2.2930]], requires_grad=True), tensor([2.8742], requires_grad=True)]
+Params are: [tensor([[ 1.4192],
+        [-2.3462]], requires_grad=True), tensor([2.8742], requires_grad=True)]
+Params are: [tensor([[ 1.4192],
+        [-2.3462]], requires_grad=True), tensor([2.9277], requires_grad=True)]
+Params are: [tensor([[ 1.4315],
+        [-2.3790]], requires_grad=True), tensor([2.9277], requires_grad=True)]
+Params are: [tensor([[ 1.4315],
+        [-2.3790]], requires_grad=True), tensor([2.9658], requires_grad=True)]
+Params are: [tensor([[ 1.4224],
+        [-2.4041]], requires_grad=True), tensor([2.9658], requires_grad=True)]
+Params are: [tensor([[ 1.4224],
+        [-2.4041]], requires_grad=True), tensor([3.0003], requires_grad=True)]
+Params are: [tensor([[ 1.4233],
+        [-2.4272]], requires_grad=True), tensor([3.0003], requires_grad=True)]
+Params are: [tensor([[ 1.4233],
+        [-2.4272]], requires_grad=True), tensor([3.0275], requires_grad=True)]
+Params are: [tensor([[ 1.4526],
+        [-2.4654]], requires_grad=True), tensor([3.0275], requires_grad=True)]
+Params are: [tensor([[ 1.4526],
+        [-2.4654]], requires_grad=True), tensor([3.0736], requires_grad=True)]
+Params are: [tensor([[ 1.4681],
+        [-2.4844]], requires_grad=True), tensor([3.0736], requires_grad=True)]
+Params are: [tensor([[ 1.4681],
+        [-2.4844]], requires_grad=True), tensor([3.1047], requires_grad=True)]
+Params are: [tensor([[ 1.4953],
+        [-2.5015]], requires_grad=True), tensor([3.1047], requires_grad=True)]
+Params are: [tensor([[ 1.4953],
+        [-2.5015]], requires_grad=True), tensor([3.1339], requires_grad=True)]
+Params are: [tensor([[ 1.5214],
+        [-2.5376]], requires_grad=True), tensor([3.1339], requires_grad=True)]
+Params are: [tensor([[ 1.5214],
+        [-2.5376]], requires_grad=True), tensor([3.1737], requires_grad=True)]
+Params are: [tensor([[ 1.5406],
+        [-2.5564]], requires_grad=True), tensor([3.1737], requires_grad=True)]
+Params are: [tensor([[ 1.5406],
+        [-2.5564]], requires_grad=True), tensor([3.2023], requires_grad=True)]
+Params are: [tensor([[ 1.5628],
+        [-2.5788]], requires_grad=True), tensor([3.2023], requires_grad=True)]
+Params are: [tensor([[ 1.5628],
+        [-2.5788]], requires_grad=True), tensor([3.2370], requires_grad=True)]
+Params are: [tensor([[ 1.5728],
+        [-2.5974]], requires_grad=True), tensor([3.2370], requires_grad=True)]
+Params are: [tensor([[ 1.5728],
+        [-2.5974]], requires_grad=True), tensor([3.2628], requires_grad=True)]
+Params are: [tensor([[ 1.5893],
+        [-2.6396]], requires_grad=True), tensor([3.2628], requires_grad=True)]
+Params are: [tensor([[ 1.5893],
+        [-2.6396]], requires_grad=True), tensor([3.2931], requires_grad=True)]
+Params are: [tensor([[ 1.5961],
+        [-2.6727]], requires_grad=True), tensor([3.2931], requires_grad=True)]
+Params are: [tensor([[ 1.5961],
+        [-2.6727]], requires_grad=True), tensor([3.3311], requires_grad=True)]
+Params are: [tensor([[ 1.6087],
+        [-2.7008]], requires_grad=True), tensor([3.3311], requires_grad=True)]
+Params are: [tensor([[ 1.6087],
+        [-2.7008]], requires_grad=True), tensor([3.3593], requires_grad=True)]
+Params are: [tensor([[ 1.6263],
+        [-2.7166]], requires_grad=True), tensor([3.3593], requires_grad=True)]
+Params are: [tensor([[ 1.6263],
+        [-2.7166]], requires_grad=True), tensor([3.3912], requires_grad=True)]
+Params are: [tensor([[ 1.6342],
+        [-2.7271]], requires_grad=True), tensor([3.3912], requires_grad=True)]
+Params are: [tensor([[ 1.6342],
+        [-2.7271]], requires_grad=True), tensor([3.4140], requires_grad=True)]
+Params are: [tensor([[ 1.6406],
+        [-2.7414]], requires_grad=True), tensor([3.4140], requires_grad=True)]
+Params are: [tensor([[ 1.6406],
+        [-2.7414]], requires_grad=True), tensor([3.4374], requires_grad=True)]
+Params are: [tensor([[ 1.6472],
+        [-2.7604]], requires_grad=True), tensor([3.4374], requires_grad=True)]
+Params are: [tensor([[ 1.6472],
+        [-2.7604]], requires_grad=True), tensor([3.4529], requires_grad=True)]
+Params are: [tensor([[ 1.6604],
+        [-2.7851]], requires_grad=True), tensor([3.4529], requires_grad=True)]
+Params are: [tensor([[ 1.6604],
+        [-2.7851]], requires_grad=True), tensor([3.4810], requires_grad=True)]
+Params are: [tensor([[ 1.6635],
+        [-2.8063]], requires_grad=True), tensor([3.4810], requires_grad=True)]
+Params are: [tensor([[ 1.6635],
+        [-2.8063]], requires_grad=True), tensor([3.5038], requires_grad=True)]
+Params are: [tensor([[ 1.6731],
+        [-2.8243]], requires_grad=True), tensor([3.5038], requires_grad=True)]
+Params are: [tensor([[ 1.6731],
+        [-2.8243]], requires_grad=True), tensor([3.5264], requires_grad=True)]
+Params are: [tensor([[ 1.6765],
+        [-2.8365]], requires_grad=True), tensor([3.5264], requires_grad=True)]
+Params are: [tensor([[ 1.6765],
+        [-2.8365]], requires_grad=True), tensor([3.5454], requires_grad=True)]
+Params are: [tensor([[ 1.6890],
+        [-2.8592]], requires_grad=True), tensor([3.5454], requires_grad=True)]
+Params are: [tensor([[ 1.6890],
+        [-2.8592]], requires_grad=True), tensor([3.5677], requires_grad=True)]
+Params are: [tensor([[ 1.7143],
+        [-2.8676]], requires_grad=True), tensor([3.5677], requires_grad=True)]
+Params are: [tensor([[ 1.7143],
+        [-2.8676]], requires_grad=True), tensor([3.5923], requires_grad=True)]
+Params are: [tensor([[ 1.7247],
+        [-2.8844]], requires_grad=True), tensor([3.5923], requires_grad=True)]
+Params are: [tensor([[ 1.7247],
+        [-2.8844]], requires_grad=True), tensor([3.6100], requires_grad=True)]
+Params are: [tensor([[ 1.7257],
+        [-2.8966]], requires_grad=True), tensor([3.6100], requires_grad=True)]
+Params are: [tensor([[ 1.7257],
+        [-2.8966]], requires_grad=True), tensor([3.6282], requires_grad=True)]
+Params are: [tensor([[ 1.7354],
+        [-2.9024]], requires_grad=True), tensor([3.6282], requires_grad=True)]
+Params are: [tensor([[ 1.7354],
+        [-2.9024]], requires_grad=True), tensor([3.6426], requires_grad=True)]
+Params are: [tensor([[ 1.7474],
+        [-2.9181]], requires_grad=True), tensor([3.6426], requires_grad=True)]
+Params are: [tensor([[ 1.7474],
+        [-2.9181]], requires_grad=True), tensor([3.6572], requires_grad=True)]
+Params are: [tensor([[ 1.7681],
+        [-2.9318]], requires_grad=True), tensor([3.6572], requires_grad=True)]
+Params are: [tensor([[ 1.7681],
+        [-2.9318]], requires_grad=True), tensor([3.6751], requires_grad=True)]
+Params are: [tensor([[ 1.7764],
+        [-2.9465]], requires_grad=True), tensor([3.6751], requires_grad=True)]
+Params are: [tensor([[ 1.7764],
+        [-2.9465]], requires_grad=True), tensor([3.6939], requires_grad=True)]
+Params are: [tensor([[ 1.7841],
+        [-2.9549]], requires_grad=True), tensor([3.6939], requires_grad=True)]
+Params are: [tensor([[ 1.7841],
+        [-2.9549]], requires_grad=True), tensor([3.7123], requires_grad=True)]
+Params are: [tensor([[ 1.7882],
+        [-2.9700]], requires_grad=True), tensor([3.7123], requires_grad=True)]
+Params are: [tensor([[ 1.7882],
+        [-2.9700]], requires_grad=True), tensor([3.7249], requires_grad=True)]
+Params are: [tensor([[ 1.7938],
+        [-2.9841]], requires_grad=True), tensor([3.7249], requires_grad=True)]
+Params are: [tensor([[ 1.7938],
+        [-2.9841]], requires_grad=True), tensor([3.7406], requires_grad=True)]
+Params are: [tensor([[ 1.8074],
+        [-3.0003]], requires_grad=True), tensor([3.7406], requires_grad=True)]
+Params are: [tensor([[ 1.8074],
+        [-3.0003]], requires_grad=True), tensor([3.7516], requires_grad=True)]
+Params are: [tensor([[ 1.8107],
+        [-3.0068]], requires_grad=True), tensor([3.7516], requires_grad=True)]
+Params are: [tensor([[ 1.8107],
+        [-3.0068]], requires_grad=True), tensor([3.7659], requires_grad=True)]
+Params are: [tensor([[ 1.8152],
+        [-3.0131]], requires_grad=True), tensor([3.7659], requires_grad=True)]
+Params are: [tensor([[ 1.8152],
+        [-3.0131]], requires_grad=True), tensor([3.7778], requires_grad=True)]
+Params are: [tensor([[ 1.8201],
+        [-3.0308]], requires_grad=True), tensor([3.7778], requires_grad=True)]
+Params are: [tensor([[ 1.8201],
+        [-3.0308]], requires_grad=True), tensor([3.7946], requires_grad=True)]
+Params are: [tensor([[ 1.8266],
+        [-3.0474]], requires_grad=True), tensor([3.7946], requires_grad=True)]
+Params are: [tensor([[ 1.8266],
+        [-3.0474]], requires_grad=True), tensor([3.8088], requires_grad=True)]
+Params are: [tensor([[ 1.8259],
+        [-3.0547]], requires_grad=True), tensor([3.8088], requires_grad=True)]
+Params are: [tensor([[ 1.8259],
+        [-3.0547]], requires_grad=True), tensor([3.8181], requires_grad=True)]
+Params are: [tensor([[ 1.8299],
+        [-3.0652]], requires_grad=True), tensor([3.8181], requires_grad=True)]
+Params are: [tensor([[ 1.8299],
+        [-3.0652]], requires_grad=True), tensor([3.8275], requires_grad=True)]
+Params are: [tensor([[ 1.8323],
+        [-3.0750]], requires_grad=True), tensor([3.8275], requires_grad=True)]
+Params are: [tensor([[ 1.8323],
+        [-3.0750]], requires_grad=True), tensor([3.8370], requires_grad=True)]
+Params are: [tensor([[ 1.8436],
+        [-3.0834]], requires_grad=True), tensor([3.8370], requires_grad=True)]
+Params are: [tensor([[ 1.8436],
+        [-3.0834]], requires_grad=True), tensor([3.8491], requires_grad=True)]
+Params are: [tensor([[ 1.8482],
+        [-3.0876]], requires_grad=True), tensor([3.8491], requires_grad=True)]
+Params are: [tensor([[ 1.8482],
+        [-3.0876]], requires_grad=True), tensor([3.8602], requires_grad=True)]
+Params are: [tensor([[ 1.8538],
+        [-3.0937]], requires_grad=True), tensor([3.8602], requires_grad=True)]
+Params are: [tensor([[ 1.8538],
+        [-3.0937]], requires_grad=True), tensor([3.8682], requires_grad=True)]
+Params are: [tensor([[ 1.8597],
+        [-3.1133]], requires_grad=True), tensor([3.8682], requires_grad=True)]
+Params are: [tensor([[ 1.8597],
+        [-3.1133]], requires_grad=True), tensor([3.8818], requires_grad=True)]
+Params are: [tensor([[ 1.8684],
+        [-3.1201]], requires_grad=True), tensor([3.8818], requires_grad=True)]
+Params are: [tensor([[ 1.8684],
+        [-3.1201]], requires_grad=True), tensor([3.8920], requires_grad=True)]
+Params are: [tensor([[ 1.8714],
+        [-3.1269]], requires_grad=True), tensor([3.8920], requires_grad=True)]
+Params are: [tensor([[ 1.8714],
+        [-3.1269]], requires_grad=True), tensor([3.8997], requires_grad=True)]
+Params are: [tensor([[ 1.8743],
+        [-3.1317]], requires_grad=True), tensor([3.8997], requires_grad=True)]
+Params are: [tensor([[ 1.8743],
+        [-3.1317]], requires_grad=True), tensor([3.9074], requires_grad=True)]
+Params are: [tensor([[ 1.8753],
+        [-3.1377]], requires_grad=True), tensor([3.9074], requires_grad=True)]
+Params are: [tensor([[ 1.8753],
+        [-3.1377]], requires_grad=True), tensor([3.9145], requires_grad=True)]
+Params are: [tensor([[ 1.8757],
+        [-3.1417]], requires_grad=True), tensor([3.9145], requires_grad=True)]
+Params are: [tensor([[ 1.8757],
+        [-3.1417]], requires_grad=True), tensor([3.9216], requires_grad=True)]
+Params are: [tensor([[ 1.8767],
+        [-3.1454]], requires_grad=True), tensor([3.9216], requires_grad=True)]
+Params are: [tensor([[ 1.8767],
+        [-3.1454]], requires_grad=True), tensor([3.9298], requires_grad=True)]
+Params are: [tensor([[ 1.8761],
+        [-3.1548]], requires_grad=True), tensor([3.9298], requires_grad=True)]
+Params are: [tensor([[ 1.8761],
+        [-3.1548]], requires_grad=True), tensor([3.9372], requires_grad=True)]
+Params are: [tensor([[ 1.8828],
+        [-3.1606]], requires_grad=True), tensor([3.9372], requires_grad=True)]
+Params are: [tensor([[ 1.8828],
+        [-3.1606]], requires_grad=True), tensor([3.9478], requires_grad=True)]
+Params are: [tensor([[ 1.8865],
+        [-3.1659]], requires_grad=True), tensor([3.9478], requires_grad=True)]
+Params are: [tensor([[ 1.8865],
+        [-3.1659]], requires_grad=True), tensor([3.9565], requires_grad=True)]
+Params are: [tensor([[ 1.8876],
+        [-3.1748]], requires_grad=True), tensor([3.9565], requires_grad=True)]
+Params are: [tensor([[ 1.8876],
+        [-3.1748]], requires_grad=True), tensor([3.9660], requires_grad=True)]
+Params are: [tensor([[ 1.8899],
+        [-3.1823]], requires_grad=True), tensor([3.9660], requires_grad=True)]
+Params are: [tensor([[ 1.8899],
+        [-3.1823]], requires_grad=True), tensor([3.9715], requires_grad=True)]
+Params are: [tensor([[ 1.8953],
+        [-3.1861]], requires_grad=True), tensor([3.9715], requires_grad=True)]
+Params are: [tensor([[ 1.8953],
+        [-3.1861]], requires_grad=True), tensor([3.9764], requires_grad=True)]
+Params are: [tensor([[ 1.9013],
+        [-3.1938]], requires_grad=True), tensor([3.9764], requires_grad=True)]
+Params are: [tensor([[ 1.9013],
+        [-3.1938]], requires_grad=True), tensor([3.9845], requires_grad=True)]
+Params are: [tensor([[ 1.9067],
+        [-3.1996]], requires_grad=True), tensor([3.9845], requires_grad=True)]
+Params are: [tensor([[ 1.9067],
+        [-3.1996]], requires_grad=True), tensor([3.9923], requires_grad=True)]
+Params are: [tensor([[ 1.9078],
+        [-3.2058]], requires_grad=True), tensor([3.9923], requires_grad=True)]
+Params are: [tensor([[ 1.9078],
+        [-3.2058]], requires_grad=True), tensor([4.0003], requires_grad=True)]
+Params are: [tensor([[ 1.9106],
+        [-3.2119]], requires_grad=True), tensor([4.0003], requires_grad=True)]
+Params are: [tensor([[ 1.9106],
+        [-3.2119]], requires_grad=True), tensor([4.0071], requires_grad=True)]
+Params are: [tensor([[ 1.9121],
+        [-3.2189]], requires_grad=True), tensor([4.0071], requires_grad=True)]
+Params are: [tensor([[ 1.9121],
+        [-3.2189]], requires_grad=True), tensor([4.0140], requires_grad=True)]
+Params are: [tensor([[ 1.9150],
+        [-3.2237]], requires_grad=True), tensor([4.0140], requires_grad=True)]
+Params are: [tensor([[ 1.9150],
+        [-3.2237]], requires_grad=True), tensor([4.0199], requires_grad=True)]
+Params are: [tensor([[ 1.9184],
+        [-3.2281]], requires_grad=True), tensor([4.0199], requires_grad=True)]
+Params are: [tensor([[ 1.9184],
+        [-3.2281]], requires_grad=True), tensor([4.0258], requires_grad=True)]
+Params are: [tensor([[ 1.9210],
+        [-3.2314]], requires_grad=True), tensor([4.0258], requires_grad=True)]
+Params are: [tensor([[ 1.9210],
+        [-3.2314]], requires_grad=True), tensor([4.0318], requires_grad=True)]
+Params are: [tensor([[ 1.9247],
+        [-3.2365]], requires_grad=True), tensor([4.0318], requires_grad=True)]
+Params are: [tensor([[ 1.9247],
+        [-3.2365]], requires_grad=True), tensor([4.0362], requires_grad=True)]
+Params are: [tensor([[ 1.9258],
+        [-3.2423]], requires_grad=True), tensor([4.0362], requires_grad=True)]
+Params are: [tensor([[ 1.9258],
+        [-3.2423]], requires_grad=True), tensor([4.0409], requires_grad=True)]
+Params are: [tensor([[ 1.9265],
+        [-3.2466]], requires_grad=True), tensor([4.0409], requires_grad=True)]
+Params are: [tensor([[ 1.9265],
+        [-3.2466]], requires_grad=True), tensor([4.0446], requires_grad=True)]
+Params are: [tensor([[ 1.9298],
+        [-3.2557]], requires_grad=True), tensor([4.0446], requires_grad=True)]
+Params are: [tensor([[ 1.9298],
+        [-3.2557]], requires_grad=True), tensor([4.0522], requires_grad=True)]
+Params are: [tensor([[ 1.9307],
+        [-3.2576]], requires_grad=True), tensor([4.0522], requires_grad=True)]
+Params are: [tensor([[ 1.9307],
+        [-3.2576]], requires_grad=True), tensor([4.0543], requires_grad=True)]
+Params are: [tensor([[ 1.9312],
+        [-3.2620]], requires_grad=True), tensor([4.0543], requires_grad=True)]
+Params are: [tensor([[ 1.9312],
+        [-3.2620]], requires_grad=True), tensor([4.0589], requires_grad=True)]
+Params are: [tensor([[ 1.9325],
+        [-3.2664]], requires_grad=True), tensor([4.0589], requires_grad=True)]
+Params are: [tensor([[ 1.9325],
+        [-3.2664]], requires_grad=True), tensor([4.0644], requires_grad=True)]
+Params are: [tensor([[ 1.9352],
+        [-3.2702]], requires_grad=True), tensor([4.0644], requires_grad=True)]
+Params are: [tensor([[ 1.9352],
+        [-3.2702]], requires_grad=True), tensor([4.0696], requires_grad=True)]
+Params are: [tensor([[ 1.9377],
+        [-3.2747]], requires_grad=True), tensor([4.0696], requires_grad=True)]
+Params are: [tensor([[ 1.9377],
+        [-3.2747]], requires_grad=True), tensor([4.0739], requires_grad=True)]
+Params are: [tensor([[ 1.9405],
+        [-3.2805]], requires_grad=True), tensor([4.0739], requires_grad=True)]
+Params are: [tensor([[ 1.9405],
+        [-3.2805]], requires_grad=True), tensor([4.0787], requires_grad=True)]
+Params are: [tensor([[ 1.9423],
+        [-3.2838]], requires_grad=True), tensor([4.0787], requires_grad=True)]
+Params are: [tensor([[ 1.9423],
+        [-3.2838]], requires_grad=True), tensor([4.0826], requires_grad=True)]
+Params are: [tensor([[ 1.9439],
+        [-3.2880]], requires_grad=True), tensor([4.0826], requires_grad=True)]
+Params are: [tensor([[ 1.9439],
+        [-3.2880]], requires_grad=True), tensor([4.0864], requires_grad=True)]
+Params are: [tensor([[ 1.9466],
+        [-3.2912]], requires_grad=True), tensor([4.0864], requires_grad=True)]
+Params are: [tensor([[ 1.9466],
+        [-3.2912]], requires_grad=True), tensor([4.0897], requires_grad=True)]
+Params are: [tensor([[ 1.9484],
+        [-3.2943]], requires_grad=True), tensor([4.0897], requires_grad=True)]
+Params are: [tensor([[ 1.9484],
+        [-3.2943]], requires_grad=True), tensor([4.0928], requires_grad=True)]
+Params are: [tensor([[ 1.9498],
+        [-3.2990]], requires_grad=True), tensor([4.0928], requires_grad=True)]
+Params are: [tensor([[ 1.9498],
+        [-3.2990]], requires_grad=True), tensor([4.0960], requires_grad=True)]
+Params are: [tensor([[ 1.9503],
+        [-3.3018]], requires_grad=True), tensor([4.0960], requires_grad=True)]
+Params are: [tensor([[ 1.9503],
+        [-3.3018]], requires_grad=True), tensor([4.0992], requires_grad=True)]
+Params are: [tensor([[ 1.9498],
+        [-3.3043]], requires_grad=True), tensor([4.0992], requires_grad=True)]
+Params are: [tensor([[ 1.9498],
+        [-3.3043]], requires_grad=True), tensor([4.1018], requires_grad=True)]
+Params are: [tensor([[ 1.9519],
+        [-3.3074]], requires_grad=True), tensor([4.1018], requires_grad=True)]
+Params are: [tensor([[ 1.9519],
+        [-3.3074]], requires_grad=True), tensor([4.1051], requires_grad=True)]
+Params are: [tensor([[ 1.9531],
+        [-3.3108]], requires_grad=True), tensor([4.1051], requires_grad=True)]
+Params are: [tensor([[ 1.9531],
+        [-3.3108]], requires_grad=True), tensor([4.1080], requires_grad=True)]
+Params are: [tensor([[ 1.9550],
+        [-3.3124]], requires_grad=True), tensor([4.1080], requires_grad=True)]
+Params are: [tensor([[ 1.9550],
+        [-3.3124]], requires_grad=True), tensor([4.1105], requires_grad=True)]
+Params are: [tensor([[ 1.9569],
+        [-3.3143]], requires_grad=True), tensor([4.1105], requires_grad=True)]
+Params are: [tensor([[ 1.9569],
+        [-3.3143]], requires_grad=True), tensor([4.1141], requires_grad=True)]
+Params are: [tensor([[ 1.9576],
+        [-3.3175]], requires_grad=True), tensor([4.1141], requires_grad=True)]
+Params are: [tensor([[ 1.9576],
+        [-3.3175]], requires_grad=True), tensor([4.1177], requires_grad=True)]
+Params are: [tensor([[ 1.9570],
+        [-3.3205]], requires_grad=True), tensor([4.1177], requires_grad=True)]
+Params are: [tensor([[ 1.9570],
+        [-3.3205]], requires_grad=True), tensor([4.1194], requires_grad=True)]
+Params are: [tensor([[ 1.9583],
+        [-3.3217]], requires_grad=True), tensor([4.1194], requires_grad=True)]
+Params are: [tensor([[ 1.9583],
+        [-3.3217]], requires_grad=True), tensor([4.1201], requires_grad=True)]
+Params are: [tensor([[ 1.9591],
+        [-3.3237]], requires_grad=True), tensor([4.1201], requires_grad=True)]
+Params are: [tensor([[ 1.9591],
+        [-3.3237]], requires_grad=True), tensor([4.1221], requires_grad=True)]
+Params are: [tensor([[ 1.9612],
+        [-3.3251]], requires_grad=True), tensor([4.1221], requires_grad=True)]
+Params are: [tensor([[ 1.9612],
+        [-3.3251]], requires_grad=True), tensor([4.1251], requires_grad=True)]
+Params are: [tensor([[ 1.9626],
+        [-3.3283]], requires_grad=True), tensor([4.1251], requires_grad=True)]
+Params are: [tensor([[ 1.9626],
+        [-3.3283]], requires_grad=True), tensor([4.1276], requires_grad=True)]
+Params are: [tensor([[ 1.9637],
+        [-3.3309]], requires_grad=True), tensor([4.1276], requires_grad=True)]
+Params are: [tensor([[ 1.9637],
+        [-3.3309]], requires_grad=True), tensor([4.1304], requires_grad=True)]
+Params are: [tensor([[ 1.9639],
+        [-3.3318]], requires_grad=True), tensor([4.1304], requires_grad=True)]
+Params are: [tensor([[ 1.9639],
+        [-3.3318]], requires_grad=True), tensor([4.1330], requires_grad=True)]
+Params are: [tensor([[ 1.9645],
+        [-3.3344]], requires_grad=True), tensor([4.1330], requires_grad=True)]
+Params are: [tensor([[ 1.9645],
+        [-3.3344]], requires_grad=True), tensor([4.1359], requires_grad=True)]
+Params are: [tensor([[ 1.9640],
+        [-3.3352]], requires_grad=True), tensor([4.1359], requires_grad=True)]
+Params are: [tensor([[ 1.9640],
+        [-3.3352]], requires_grad=True), tensor([4.1379], requires_grad=True)]
+Params are: [tensor([[ 1.9642],
+        [-3.3384]], requires_grad=True), tensor([4.1379], requires_grad=True)]
+Params are: [tensor([[ 1.9642],
+        [-3.3384]], requires_grad=True), tensor([4.1404], requires_grad=True)]
+Params are: [tensor([[ 1.9654],
+        [-3.3407]], requires_grad=True), tensor([4.1404], requires_grad=True)]
+Params are: [tensor([[ 1.9654],
+        [-3.3407]], requires_grad=True), tensor([4.1424], requires_grad=True)]
+Params are: [tensor([[ 1.9675],
+        [-3.3420]], requires_grad=True), tensor([4.1424], requires_grad=True)]
+Params are: [tensor([[ 1.9675],
+        [-3.3420]], requires_grad=True), tensor([4.1445], requires_grad=True)]
+Params are: [tensor([[ 1.9695],
+        [-3.3452]], requires_grad=True), tensor([4.1445], requires_grad=True)]
+Params are: [tensor([[ 1.9695],
+        [-3.3452]], requires_grad=True), tensor([4.1460], requires_grad=True)]
+Params are: [tensor([[ 1.9714],
+        [-3.3455]], requires_grad=True), tensor([4.1460], requires_grad=True)]
+Params are: [tensor([[ 1.9714],
+        [-3.3455]], requires_grad=True), tensor([4.1477], requires_grad=True)]
+Params are: [tensor([[ 1.9722],
+        [-3.3475]], requires_grad=True), tensor([4.1477], requires_grad=True)]
+Params are: [tensor([[ 1.9722],
+        [-3.3475]], requires_grad=True), tensor([4.1485], requires_grad=True)]
+Params are: [tensor([[ 1.9729],
+        [-3.3486]], requires_grad=True), tensor([4.1485], requires_grad=True)]
+Params are: [tensor([[ 1.9729],
+        [-3.3486]], requires_grad=True), tensor([4.1498], requires_grad=True)]
+Params are: [tensor([[ 1.9729],
+        [-3.3509]], requires_grad=True), tensor([4.1498], requires_grad=True)]
+Params are: [tensor([[ 1.9729],
+        [-3.3509]], requires_grad=True), tensor([4.1522], requires_grad=True)]
+Params are: [tensor([[ 1.9740],
+        [-3.3536]], requires_grad=True), tensor([4.1522], requires_grad=True)]
+Params are: [tensor([[ 1.9740],
+        [-3.3536]], requires_grad=True), tensor([4.1542], requires_grad=True)]
+Params are: [tensor([[ 1.9758],
+        [-3.3556]], requires_grad=True), tensor([4.1542], requires_grad=True)]
+Params are: [tensor([[ 1.9758],
+        [-3.3556]], requires_grad=True), tensor([4.1550], requires_grad=True)]
+Params are: [tensor([[ 1.9779],
+        [-3.3558]], requires_grad=True), tensor([4.1550], requires_grad=True)]
+Params are: [tensor([[ 1.9779],
+        [-3.3558]], requires_grad=True), tensor([4.1569], requires_grad=True)]
+Params are: [tensor([[ 1.9783],
+        [-3.3578]], requires_grad=True), tensor([4.1569], requires_grad=True)]
+Params are: [tensor([[ 1.9783],
+        [-3.3578]], requires_grad=True), tensor([4.1592], requires_grad=True)]
+Params are: [tensor([[ 1.9783],
+        [-3.3596]], requires_grad=True), tensor([4.1592], requires_grad=True)]
+Params are: [tensor([[ 1.9783],
+        [-3.3596]], requires_grad=True), tensor([4.1614], requires_grad=True)]
+Params are: [tensor([[ 1.9790],
+        [-3.3612]], requires_grad=True), tensor([4.1614], requires_grad=True)]
+Params are: [tensor([[ 1.9790],
+        [-3.3612]], requires_grad=True), tensor([4.1619], requires_grad=True)]
+Params are: [tensor([[ 1.9798],
+        [-3.3627]], requires_grad=True), tensor([4.1619], requires_grad=True)]
+Params are: [tensor([[ 1.9798],
+        [-3.3627]], requires_grad=True), tensor([4.1629], requires_grad=True)]
+Params are: [tensor([[ 1.9805],
+        [-3.3634]], requires_grad=True), tensor([4.1629], requires_grad=True)]
+Params are: [tensor([[ 1.9805],
+        [-3.3634]], requires_grad=True), tensor([4.1640], requires_grad=True)]
+Params are: [tensor([[ 1.9806],
+        [-3.3653]], requires_grad=True), tensor([4.1640], requires_grad=True)]
+Params are: [tensor([[ 1.9806],
+        [-3.3653]], requires_grad=True), tensor([4.1646], requires_grad=True)]
+Params are: [tensor([[ 1.9806],
+        [-3.3663]], requires_grad=True), tensor([4.1646], requires_grad=True)]
+Params are: [tensor([[ 1.9806],
+        [-3.3663]], requires_grad=True), tensor([4.1651], requires_grad=True)]
+Params are: [tensor([[ 1.9816],
+        [-3.3672]], requires_grad=True), tensor([4.1651], requires_grad=True)]
+Params are: [tensor([[ 1.9816],
+        [-3.3672]], requires_grad=True), tensor([4.1668], requires_grad=True)]
+Params are: [tensor([[ 1.9819],
+        [-3.3671]], requires_grad=True), tensor([4.1668], requires_grad=True)]
+Params are: [tensor([[ 1.9819],
+        [-3.3671]], requires_grad=True), tensor([4.1673], requires_grad=True)]
+Params are: [tensor([[ 1.9834],
+        [-3.3673]], requires_grad=True), tensor([4.1673], requires_grad=True)]
+Params are: [tensor([[ 1.9834],
+        [-3.3673]], requires_grad=True), tensor([4.1678], requires_grad=True)]
+Params are: [tensor([[ 1.9837],
+        [-3.3676]], requires_grad=True), tensor([4.1678], requires_grad=True)]
+Params are: [tensor([[ 1.9837],
+        [-3.3676]], requires_grad=True), tensor([4.1692], requires_grad=True)]
+Params are: [tensor([[ 1.9843],
+        [-3.3678]], requires_grad=True), tensor([4.1692], requires_grad=True)]
+Params are: [tensor([[ 1.9843],
+        [-3.3678]], requires_grad=True), tensor([4.1700], requires_grad=True)]
+Params are: [tensor([[ 1.9848],
+        [-3.3691]], requires_grad=True), tensor([4.1700], requires_grad=True)]
+Params are: [tensor([[ 1.9848],
+        [-3.3691]], requires_grad=True), tensor([4.1717], requires_grad=True)]
+Params are: [tensor([[ 1.9849],
+        [-3.3696]], requires_grad=True), tensor([4.1717], requires_grad=True)]
+Params are: [tensor([[ 1.9849],
+        [-3.3696]], requires_grad=True), tensor([4.1715], requires_grad=True)]
+Params are: [tensor([[ 1.9847],
+        [-3.3706]], requires_grad=True), tensor([4.1715], requires_grad=True)]
+Params are: [tensor([[ 1.9847],
+        [-3.3706]], requires_grad=True), tensor([4.1719], requires_grad=True)]
+Params are: [tensor([[ 1.9858],
+        [-3.3713]], requires_grad=True), tensor([4.1719], requires_grad=True)]
+Params are: [tensor([[ 1.9858],
+        [-3.3713]], requires_grad=True), tensor([4.1730], requires_grad=True)]
+Params are: [tensor([[ 1.9852],
+        [-3.3726]], requires_grad=True), tensor([4.1730], requires_grad=True)]
+Params are: [tensor([[ 1.9852],
+        [-3.3726]], requires_grad=True), tensor([4.1735], requires_grad=True)]
+Params are: [tensor([[ 1.9850],
+        [-3.3734]], requires_grad=True), tensor([4.1735], requires_grad=True)]
+Params are: [tensor([[ 1.9850],
+        [-3.3734]], requires_grad=True), tensor([4.1744], requires_grad=True)]
+Params are: [tensor([[ 1.9854],
+        [-3.3746]], requires_grad=True), tensor([4.1744], requires_grad=True)]
+Params are: [tensor([[ 1.9854],
+        [-3.3746]], requires_grad=True), tensor([4.1756], requires_grad=True)]
+Params are: [tensor([[ 1.9858],
+        [-3.3744]], requires_grad=True), tensor([4.1756], requires_grad=True)]
+Params are: [tensor([[ 1.9858],
+        [-3.3744]], requires_grad=True), tensor([4.1761], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3750]], requires_grad=True), tensor([4.1761], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3750]], requires_grad=True), tensor([4.1767], requires_grad=True)]
+Params are: [tensor([[ 1.9873],
+        [-3.3757]], requires_grad=True), tensor([4.1767], requires_grad=True)]
+Params are: [tensor([[ 1.9873],
+        [-3.3757]], requires_grad=True), tensor([4.1766], requires_grad=True)]
+Params are: [tensor([[ 1.9881],
+        [-3.3758]], requires_grad=True), tensor([4.1766], requires_grad=True)]
+Params are: [tensor([[ 1.9881],
+        [-3.3758]], requires_grad=True), tensor([4.1775], requires_grad=True)]
+Params are: [tensor([[ 1.9886],
+        [-3.3770]], requires_grad=True), tensor([4.1775], requires_grad=True)]
+Params are: [tensor([[ 1.9886],
+        [-3.3770]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9882],
+        [-3.3775]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9882],
+        [-3.3775]], requires_grad=True), tensor([4.1788], requires_grad=True)]
+Params are: [tensor([[ 1.9884],
+        [-3.3785]], requires_grad=True), tensor([4.1788], requires_grad=True)]
+Params are: [tensor([[ 1.9884],
+        [-3.3785]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3792]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3792]], requires_grad=True), tensor([4.1798], requires_grad=True)]
+Params are: [tensor([[ 1.9873],
+        [-3.3793]], requires_grad=True), tensor([4.1798], requires_grad=True)]
+Params are: [tensor([[ 1.9873],
+        [-3.3793]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3807]], requires_grad=True), tensor([4.1793], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3807]], requires_grad=True), tensor([4.1799], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3809]], requires_grad=True), tensor([4.1799], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3809]], requires_grad=True), tensor([4.1806], requires_grad=True)]
+Params are: [tensor([[ 1.9884],
+        [-3.3808]], requires_grad=True), tensor([4.1806], requires_grad=True)]
+Params are: [tensor([[ 1.9884],
+        [-3.3808]], requires_grad=True), tensor([4.1800], requires_grad=True)]
+Params are: [tensor([[ 1.9886],
+        [-3.3810]], requires_grad=True), tensor([4.1800], requires_grad=True)]
+Params are: [tensor([[ 1.9886],
+        [-3.3810]], requires_grad=True), tensor([4.1811], requires_grad=True)]
+Params are: [tensor([[ 1.9887],
+        [-3.3813]], requires_grad=True), tensor([4.1811], requires_grad=True)]
+Params are: [tensor([[ 1.9887],
+        [-3.3813]], requires_grad=True), tensor([4.1819], requires_grad=True)]
+Params are: [tensor([[ 1.9877],
+        [-3.3828]], requires_grad=True), tensor([4.1819], requires_grad=True)]
+Params are: [tensor([[ 1.9877],
+        [-3.3828]], requires_grad=True), tensor([4.1827], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3845]], requires_grad=True), tensor([4.1827], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3845]], requires_grad=True), tensor([4.1833], requires_grad=True)]
+Params are: [tensor([[ 1.9874],
+        [-3.3851]], requires_grad=True), tensor([4.1833], requires_grad=True)]
+Params are: [tensor([[ 1.9874],
+        [-3.3851]], requires_grad=True), tensor([4.1839], requires_grad=True)]
+Params are: [tensor([[ 1.9867],
+        [-3.3852]], requires_grad=True), tensor([4.1839], requires_grad=True)]
+Params are: [tensor([[ 1.9867],
+        [-3.3852]], requires_grad=True), tensor([4.1848], requires_grad=True)]
+Params are: [tensor([[ 1.9867],
+        [-3.3854]], requires_grad=True), tensor([4.1848], requires_grad=True)]
+Params are: [tensor([[ 1.9867],
+        [-3.3854]], requires_grad=True), tensor([4.1852], requires_grad=True)]
+Params are: [tensor([[ 1.9864],
+        [-3.3857]], requires_grad=True), tensor([4.1852], requires_grad=True)]
+Params are: [tensor([[ 1.9864],
+        [-3.3857]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3855]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9871],
+        [-3.3855]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9874],
+        [-3.3854]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9874],
+        [-3.3854]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3864]], requires_grad=True), tensor([4.1858], requires_grad=True)]
+Params are: [tensor([[ 1.9880],
+        [-3.3864]], requires_grad=True), tensor([4.1860], requires_grad=True)]
+Params are: [tensor([[ 1.9892],
+        [-3.3868]], requires_grad=True), tensor([4.1860], requires_grad=True)]
+Params are: [tensor([[ 1.9892],
+        [-3.3868]], requires_grad=True), tensor([4.1865], requires_grad=True)]
+Params are: [tensor([[ 1.9897],
+        [-3.3862]], requires_grad=True), tensor([4.1865], requires_grad=True)]
+Params are: [tensor([[ 1.9897],
+        [-3.3862]], requires_grad=True), tensor([4.1869], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3862]], requires_grad=True), tensor([4.1869], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3862]], requires_grad=True), tensor([4.1873], requires_grad=True)]
+Params are: [tensor([[ 1.9913],
+        [-3.3872]], requires_grad=True), tensor([4.1873], requires_grad=True)]
+Params are: [tensor([[ 1.9913],
+        [-3.3872]], requires_grad=True), tensor([4.1894], requires_grad=True)]
+Params are: [tensor([[ 1.9915],
+        [-3.3888]], requires_grad=True), tensor([4.1894], requires_grad=True)]
+Params are: [tensor([[ 1.9915],
+        [-3.3888]], requires_grad=True), tensor([4.1905], requires_grad=True)]
+Params are: [tensor([[ 1.9916],
+        [-3.3881]], requires_grad=True), tensor([4.1905], requires_grad=True)]
+Params are: [tensor([[ 1.9916],
+        [-3.3881]], requires_grad=True), tensor([4.1912], requires_grad=True)]
+Params are: [tensor([[ 1.9920],
+        [-3.3888]], requires_grad=True), tensor([4.1912], requires_grad=True)]
+Params are: [tensor([[ 1.9920],
+        [-3.3888]], requires_grad=True), tensor([4.1908], requires_grad=True)]
+Params are: [tensor([[ 1.9919],
+        [-3.3890]], requires_grad=True), tensor([4.1908], requires_grad=True)]
+Params are: [tensor([[ 1.9919],
+        [-3.3890]], requires_grad=True), tensor([4.1917], requires_grad=True)]
+Params are: [tensor([[ 1.9926],
+        [-3.3893]], requires_grad=True), tensor([4.1917], requires_grad=True)]
+Params are: [tensor([[ 1.9926],
+        [-3.3893]], requires_grad=True), tensor([4.1927], requires_grad=True)]
+Params are: [tensor([[ 1.9928],
+        [-3.3903]], requires_grad=True), tensor([4.1927], requires_grad=True)]
+Params are: [tensor([[ 1.9928],
+        [-3.3903]], requires_grad=True), tensor([4.1935], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3912]], requires_grad=True), tensor([4.1935], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3912]], requires_grad=True), tensor([4.1945], requires_grad=True)]
+Params are: [tensor([[ 1.9924],
+        [-3.3906]], requires_grad=True), tensor([4.1945], requires_grad=True)]
+Params are: [tensor([[ 1.9924],
+        [-3.3906]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9922],
+        [-3.3909]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9922],
+        [-3.3909]], requires_grad=True), tensor([4.1930], requires_grad=True)]
+Params are: [tensor([[ 1.9921],
+        [-3.3918]], requires_grad=True), tensor([4.1930], requires_grad=True)]
+Params are: [tensor([[ 1.9921],
+        [-3.3918]], requires_grad=True), tensor([4.1929], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3925]], requires_grad=True), tensor([4.1929], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3925]], requires_grad=True), tensor([4.1925], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3927]], requires_grad=True), tensor([4.1925], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3927]], requires_grad=True), tensor([4.1918], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3917]], requires_grad=True), tensor([4.1918], requires_grad=True)]
+Params are: [tensor([[ 1.9914],
+        [-3.3917]], requires_grad=True), tensor([4.1932], requires_grad=True)]
+Params are: [tensor([[ 1.9918],
+        [-3.3917]], requires_grad=True), tensor([4.1932], requires_grad=True)]
+Params are: [tensor([[ 1.9918],
+        [-3.3917]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9909],
+        [-3.3911]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9909],
+        [-3.3911]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3929]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3929]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3926]], requires_grad=True), tensor([4.1931], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3926]], requires_grad=True), tensor([4.1933], requires_grad=True)]
+Params are: [tensor([[ 1.9907],
+        [-3.3916]], requires_grad=True), tensor([4.1933], requires_grad=True)]
+Params are: [tensor([[ 1.9907],
+        [-3.3916]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9898],
+        [-3.3925]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9898],
+        [-3.3925]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3923]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3923]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9903],
+        [-3.3926]], requires_grad=True), tensor([4.1937], requires_grad=True)]
+Params are: [tensor([[ 1.9903],
+        [-3.3926]], requires_grad=True), tensor([4.1936], requires_grad=True)]
+Params are: [tensor([[ 1.9906],
+        [-3.3922]], requires_grad=True), tensor([4.1936], requires_grad=True)]
+Params are: [tensor([[ 1.9906],
+        [-3.3922]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3929]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9908],
+        [-3.3929]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9910],
+        [-3.3930]], requires_grad=True), tensor([4.1944], requires_grad=True)]
+Params are: [tensor([[ 1.9910],
+        [-3.3930]], requires_grad=True), tensor([4.1939], requires_grad=True)]
+Params are: [tensor([[ 1.9894],
+        [-3.3929]], requires_grad=True), tensor([4.1939], requires_grad=True)]
+Params are: [tensor([[ 1.9894],
+        [-3.3929]], requires_grad=True), tensor([4.1943], requires_grad=True)]
+Params are: [tensor([[ 1.9893],
+        [-3.3931]], requires_grad=True), tensor([4.1943], requires_grad=True)]
+Params are: [tensor([[ 1.9893],
+        [-3.3931]], requires_grad=True), tensor([4.1941], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3926]], requires_grad=True), tensor([4.1941], requires_grad=True)]
+Params are: [tensor([[ 1.9900],
+        [-3.3926]], requires_grad=True), tensor([4.1938], requires_grad=True)]
+Params are: [tensor([[ 1.9902],
+        [-3.3931]], requires_grad=True), tensor([4.1938], requires_grad=True)]
+Params are: [tensor([[ 1.9902],
+        [-3.3931]], requires_grad=True), tensor([4.1936], requires_grad=True)]
+Params are: [tensor([[ 1.9909],
+        [-3.3930]], requires_grad=True), tensor([4.1936], requires_grad=True)]
+Params are: [tensor([[ 1.9909],
+        [-3.3930]], requires_grad=True), tensor([4.1939], requires_grad=True)]
+Params are: [tensor([[ 1.9919],
+        [-3.3934]], requires_grad=True), tensor([4.1939], requires_grad=True)]
+Params are: [tensor([[ 1.9919],
+        [-3.3934]], requires_grad=True), tensor([4.1942], requires_grad=True)]
+Params are: [tensor([[ 1.9931],
+        [-3.3949]], requires_grad=True), tensor([4.1942], requires_grad=True)]
+Params are: [tensor([[ 1.9931],
+        [-3.3949]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3947]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3947]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9929],
+        [-3.3947]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9929],
+        [-3.3947]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9933],
+        [-3.3953]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9933],
+        [-3.3953]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3956]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3956]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3951]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3951]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3940]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3940]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3936]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3936]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3944]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3944]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3953]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3953]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.3950]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.3950]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.3957]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.3957]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9950],
+        [-3.3960]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9950],
+        [-3.3960]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3965]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3965]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3967]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3967]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3972]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3972]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3972]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3972]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3976]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3976]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3975]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3975]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3977]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3977]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3979]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3979]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3975]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3975]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3974]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3974]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3973]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3973]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3971]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3971]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3969]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3969]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3965]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3965]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3959]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3959]], requires_grad=True), tensor([4.1950], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3952]], requires_grad=True), tensor([4.1950], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3952]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3958]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3958]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3949]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3949]], requires_grad=True), tensor([4.1943], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3947]], requires_grad=True), tensor([4.1943], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3947]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3951]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3951]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3956]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3956]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3950]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3950]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3952]], requires_grad=True), tensor([4.1947], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3952]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3954]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3954]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3959]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3959]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3961]], requires_grad=True), tensor([4.1953], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3961]], requires_grad=True), tensor([4.1942], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3959]], requires_grad=True), tensor([4.1942], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3959]], requires_grad=True), tensor([4.1948], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3957]], requires_grad=True), tensor([4.1948], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3957]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3953]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3953]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3958]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3958]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3961]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3961]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3964]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3964]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3962]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3962]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3970]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3970]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3971]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3971]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9935],
+        [-3.3978]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9935],
+        [-3.3978]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9940],
+        [-3.3982]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9940],
+        [-3.3982]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3987]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3987]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.3992]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.3992]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3988]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3988]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3983]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3983]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3981]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3981]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3972]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9944],
+        [-3.3972]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3967]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3967]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3980]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3980]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3971]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9927],
+        [-3.3971]], requires_grad=True), tensor([4.1948], requires_grad=True)]
+Params are: [tensor([[ 1.9922],
+        [-3.3981]], requires_grad=True), tensor([4.1948], requires_grad=True)]
+Params are: [tensor([[ 1.9922],
+        [-3.3981]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3980]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9925],
+        [-3.3980]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9931],
+        [-3.3980]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9931],
+        [-3.3980]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3980]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.3980]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9945],
+        [-3.3979]], requires_grad=True), tensor([4.1952], requires_grad=True)]
+Params are: [tensor([[ 1.9945],
+        [-3.3979]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3976]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.3976]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3968]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3968]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3975]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3975]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3968]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3968]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3968]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3968]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3971]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3971]], requires_grad=True), tensor([4.1961], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1961], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3980]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3980]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3975]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3975]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3983]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3983]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3989]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3989]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3990]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3990]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3987]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3987]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3976]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3976]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3970]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3970]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3962]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3962]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3962]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3962]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3961]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3961]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3962]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3962]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3963]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3963]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3971]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3971]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3977]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3977]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3981]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3981]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.3977]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.3977]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3983]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3983]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3990]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3990]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3986]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3986]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.3988]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.3988]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3982]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3982]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3980]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3980]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3974]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3974]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3964]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3964]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3967]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3967]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3969]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3969]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3968]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3968]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3968]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3968]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3965]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3965]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3963]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3963]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3961]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3961]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3958]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3958]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3962]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3962]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3962]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3962]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3972]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3972]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3965]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3965]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3965]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3965]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3954]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3954]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3959]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3959]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3959]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3959]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3958]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3958]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3972]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3972]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3977]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3977]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3976]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3976]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3972]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3972]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3981]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3981]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3992]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3992]], requires_grad=True), tensor([4.2008], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3987]], requires_grad=True), tensor([4.2008], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3987]], requires_grad=True), tensor([4.2016], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3988]], requires_grad=True), tensor([4.2016], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3988]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3982]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3982]], requires_grad=True), tensor([4.2016], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3985]], requires_grad=True), tensor([4.2016], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3985]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.3982]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.3982]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3985]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9947],
+        [-3.3985]], requires_grad=True), tensor([4.2004], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3996]], requires_grad=True), tensor([4.2004], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3996]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3988]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3988]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.3998]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.3998]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3994]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3994]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3988]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3988]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3992]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3992]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3993]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3993]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4005]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4005]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4001]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4001]], requires_grad=True), tensor([4.2005], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.4003]], requires_grad=True), tensor([4.2005], requires_grad=True)]
+Params are: [tensor([[ 1.9952],
+        [-3.4003]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.4002]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.4002]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4004]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4004]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4007]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4007]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.4000]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.4000]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.4001]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.4001]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.4004]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.4004]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4004]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4004]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.4012]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.4012]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.4007]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.4007]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3995]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3995]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3982]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3982]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3986]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3986]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3993]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3993]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3995]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3995]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.4002]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.4002]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4006]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4006]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3998]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3998]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3999]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3999]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3995]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3995]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3983]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3983]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3979]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3979]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3975]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3975]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3976]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3976]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3977]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3977]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3978]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3978]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3982]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3982]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3975]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3975]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3985]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3985]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3982]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3982]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3984]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3984]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3982]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3982]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3981]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3981]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3982]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3982]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3975]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3975]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3977]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3977]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3972]], requires_grad=True), tensor([4.1969], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3972]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3975]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3975]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3977]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3977]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3972]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3972]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3965]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3965]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3968]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3968]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3971]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3971]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3967]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3967]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3969]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3969]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3970]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3970]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3967]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3967]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3972]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3972]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3970]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3970]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9991],
+        [-3.3969]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9991],
+        [-3.3969]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9992],
+        [-3.3966]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9992],
+        [-3.3966]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3967]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3967]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3974]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3974]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3977]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3977]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3978]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3978]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 2.0000],
+        [-3.3976]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 2.0000],
+        [-3.3976]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 2.0001],
+        [-3.3983]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 2.0001],
+        [-3.3983]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3985]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3985]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3984]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3984]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3984]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3984]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3982]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3982]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3981]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3981]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3982]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3982]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3992]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3992]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3993]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3993]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3988]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3988]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3991]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3991]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3987]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3987]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3996]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3996]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.4003]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.4003]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3998]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3998]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.4003]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.4003]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3997]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3997]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3991]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3991]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3990]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3990]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3997]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9990],
+        [-3.3997]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.4001]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.4001]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3998]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3998]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4000]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4000]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4000]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4000]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3999]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3999]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3997]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3997]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3998]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3998]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.4007]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.4007]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.4009]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.4009]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4013]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4013]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4023]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4023]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4018]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4018]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.4013]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.4013]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4012]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.4012]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4012]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4012]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.4009]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.4009]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.4008]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9949],
+        [-3.4008]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.4017]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9946],
+        [-3.4017]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9950],
+        [-3.4019]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9950],
+        [-3.4019]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9939],
+        [-3.4017]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9939],
+        [-3.4017]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9938],
+        [-3.4013]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9938],
+        [-3.4013]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.4011]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9942],
+        [-3.4011]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9945],
+        [-3.4006]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9945],
+        [-3.4006]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4002]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4002]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3993]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3993]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3993]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3993]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3988]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3988]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3991]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3991]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3997]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3997]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3997]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3997]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.4001]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.4001]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.4001]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.4001]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.4005]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.4005]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3993]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3993]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3990]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3990]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3985]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3985]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3993]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3993]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.4000]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.4000]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.4001]], requires_grad=True), tensor([4.1975], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.4001]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.4005]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.4005]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.4005]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.4005]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3997]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3997]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3993]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3993]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3992]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3992]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3985]], requires_grad=True), tensor([4.1989], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3985]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3984]], requires_grad=True), tensor([4.1990], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3984]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3986]], requires_grad=True), tensor([4.1992], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3986]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3979]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3979]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3984]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3986]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3986]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3988]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3988]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3987]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3987]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3996]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3996]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4004]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4004]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4002]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.4002]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.4003]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.4003]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.4002]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.4002]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.4001]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.4001]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.4004]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.4004]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4006]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.4006]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3995]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9956],
+        [-3.3995]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3998]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3998]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3995]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3995]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3993]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3993]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3992]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3992]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3987]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3987]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3982]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3982]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3986]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3986]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3974]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3974]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3977]], requires_grad=True), tensor([4.1984], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3977]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3974]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3974]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3967]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3967]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3964]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3964]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3963]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3963]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3967]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3967]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3974]], requires_grad=True), tensor([4.1981], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3974]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3976]], requires_grad=True), tensor([4.1978], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3976]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3975]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3975]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3980]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9979],
+        [-3.3980]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3978]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9984],
+        [-3.3978]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3967]], requires_grad=True), tensor([4.1972], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3967]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3977]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.3977]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3963]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9983],
+        [-3.3963]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3961]], requires_grad=True), tensor([4.1958], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3961]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3951]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3951]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3948]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3948]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3948]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3948]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3941]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3941]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3945]], requires_grad=True), tensor([4.1956], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3945]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3939]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9988],
+        [-3.3939]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3943]], requires_grad=True), tensor([4.1955], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3943]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3944]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9985],
+        [-3.3944]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3949]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3949]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3953]], requires_grad=True), tensor([4.1959], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.3953]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3952]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3952]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3945]], requires_grad=True), tensor([4.1964], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3945]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3952]], requires_grad=True), tensor([4.1954], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3952]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3955]], requires_grad=True), tensor([4.1957], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3955]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3953]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3953]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3953]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3953]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3958]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3958]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3966]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9978],
+        [-3.3966]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3967]], requires_grad=True), tensor([4.1976], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3967]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3963]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3963]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3970]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3970]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1973], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3973]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3973]], requires_grad=True), tensor([4.1961], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3982]], requires_grad=True), tensor([4.1961], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3982]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3991]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3991]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3989]], requires_grad=True), tensor([4.1963], requires_grad=True)]
+Params are: [tensor([[ 1.9975],
+        [-3.3989]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3995]], requires_grad=True), tensor([4.1965], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3995]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.4002]], requires_grad=True), tensor([4.1967], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.4002]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3989]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3989]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3989]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3989]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3988]], requires_grad=True), tensor([4.1968], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3988]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3986]], requires_grad=True), tensor([4.1960], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3986]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3989]], requires_grad=True), tensor([4.1966], requires_grad=True)]
+Params are: [tensor([[ 1.9966],
+        [-3.3989]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3996]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3996]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3997]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3997]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4003]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4003]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.4011]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.4011]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.4000]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.4000]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4001]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.4001]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3999]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9955],
+        [-3.3999]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4003]], requires_grad=True), tensor([4.1983], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4003]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4008]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.4008]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.4014]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.4014]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4016]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9953],
+        [-3.4016]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.4014]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.4014]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.4014]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9972],
+        [-3.4014]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3985]], requires_grad=True), tensor([4.2006], requires_grad=True)]
+Params are: [tensor([[ 1.9976],
+        [-3.3985]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3978]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3978]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9974],
+        [-3.3975]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3961]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9968],
+        [-3.3961]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3961]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3961]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3965]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3965]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3976]], requires_grad=True), tensor([4.1993], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3976]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9973],
+        [-3.3971]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3980]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3980]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9970],
+        [-3.3971]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3973]], requires_grad=True), tensor([4.1998], requires_grad=True)]
+Params are: [tensor([[ 1.9982],
+        [-3.3973]], requires_grad=True), tensor([4.2003], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3978]], requires_grad=True), tensor([4.2003], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3978]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3984]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3984]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9996],
+        [-3.3982]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9996],
+        [-3.3982]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9998],
+        [-3.3985]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9998],
+        [-3.3985]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3986]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3986]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9996],
+        [-3.3981]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9996],
+        [-3.3981]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3985]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9994],
+        [-3.3985]], requires_grad=True), tensor([4.2011], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3984]], requires_grad=True), tensor([4.2011], requires_grad=True)]
+Params are: [tensor([[ 1.9987],
+        [-3.3984]], requires_grad=True), tensor([4.2007], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3987]], requires_grad=True), tensor([4.2007], requires_grad=True)]
+Params are: [tensor([[ 1.9989],
+        [-3.3987]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3979]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3979]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9997],
+        [-3.3979]], requires_grad=True), tensor([4.2013], requires_grad=True)]
+Params are: [tensor([[ 1.9997],
+        [-3.3979]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3987]], requires_grad=True), tensor([4.2010], requires_grad=True)]
+Params are: [tensor([[ 1.9993],
+        [-3.3987]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3985]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 1.9995],
+        [-3.3985]], requires_grad=True), tensor([4.2021], requires_grad=True)]
+Params are: [tensor([[ 2.0011],
+        [-3.3983]], requires_grad=True), tensor([4.2021], requires_grad=True)]
+Params are: [tensor([[ 2.0011],
+        [-3.3983]], requires_grad=True), tensor([4.2028], requires_grad=True)]
+Params are: [tensor([[ 2.0008],
+        [-3.3987]], requires_grad=True), tensor([4.2028], requires_grad=True)]
+Params are: [tensor([[ 2.0008],
+        [-3.3987]], requires_grad=True), tensor([4.2030], requires_grad=True)]
+Params are: [tensor([[ 2.0012],
+        [-3.3993]], requires_grad=True), tensor([4.2030], requires_grad=True)]
+Params are: [tensor([[ 2.0012],
+        [-3.3993]], requires_grad=True), tensor([4.2024], requires_grad=True)]
+Params are: [tensor([[ 2.0015],
+        [-3.4001]], requires_grad=True), tensor([4.2024], requires_grad=True)]
+Params are: [tensor([[ 2.0015],
+        [-3.4001]], requires_grad=True), tensor([4.2031], requires_grad=True)]
+Params are: [tensor([[ 2.0016],
+        [-3.4007]], requires_grad=True), tensor([4.2031], requires_grad=True)]
+Params are: [tensor([[ 2.0016],
+        [-3.4007]], requires_grad=True), tensor([4.2020], requires_grad=True)]
+Params are: [tensor([[ 2.0010],
+        [-3.3998]], requires_grad=True), tensor([4.2020], requires_grad=True)]
+Params are: [tensor([[ 2.0010],
+        [-3.3998]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 2.0002],
+        [-3.3998]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 2.0002],
+        [-3.3998]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 2.0003],
+        [-3.3996]], requires_grad=True), tensor([4.2017], requires_grad=True)]
+Params are: [tensor([[ 2.0003],
+        [-3.3996]], requires_grad=True), tensor([4.2020], requires_grad=True)]
+Params are: [tensor([[ 1.9999],
+        [-3.3997]], requires_grad=True), tensor([4.2020], requires_grad=True)]
+Params are: [tensor([[ 1.9999],
+        [-3.3997]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.4003]], requires_grad=True), tensor([4.2015], requires_grad=True)]
+Params are: [tensor([[ 1.9986],
+        [-3.4003]], requires_grad=True), tensor([4.2008], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.4002]], requires_grad=True), tensor([4.2008], requires_grad=True)]
+Params are: [tensor([[ 1.9981],
+        [-3.4002]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3996]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3996]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3993]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9969],
+        [-3.3993]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3988]], requires_grad=True), tensor([4.1997], requires_grad=True)]
+Params are: [tensor([[ 1.9964],
+        [-3.3988]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3986]], requires_grad=True), tensor([4.1994], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3986]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3989]], requires_grad=True), tensor([4.1982], requires_grad=True)]
+Params are: [tensor([[ 1.9971],
+        [-3.3989]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3987]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9977],
+        [-3.3987]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3993]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9980],
+        [-3.3993]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3993]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9965],
+        [-3.3993]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3991]], requires_grad=True), tensor([4.1977], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3991]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3992]], requires_grad=True), tensor([4.1962], requires_grad=True)]
+Params are: [tensor([[ 1.9960],
+        [-3.3992]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3988]], requires_grad=True), tensor([4.1970], requires_grad=True)]
+Params are: [tensor([[ 1.9959],
+        [-3.3988]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3980]], requires_grad=True), tensor([4.1971], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3980]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3981]], requires_grad=True), tensor([4.1974], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3981]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3973]], requires_grad=True), tensor([4.1980], requires_grad=True)]
+Params are: [tensor([[ 1.9961],
+        [-3.3973]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3972]], requires_grad=True), tensor([4.1991], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3972]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3967]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3967]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3978]], requires_grad=True), tensor([4.1985], requires_grad=True)]
+Params are: [tensor([[ 1.9958],
+        [-3.3978]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3982]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3982]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3985]], requires_grad=True), tensor([4.2001], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3985]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3993]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9962],
+        [-3.3993]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3995]], requires_grad=True), tensor([4.1995], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3995]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3992]], requires_grad=True), tensor([4.1999], requires_grad=True)]
+Params are: [tensor([[ 1.9963],
+        [-3.3992]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3990]], requires_grad=True), tensor([4.2002], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3990]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9941],
+        [-3.3999]], requires_grad=True), tensor([4.2000], requires_grad=True)]
+Params are: [tensor([[ 1.9941],
+        [-3.3999]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3995]], requires_grad=True), tensor([4.1996], requires_grad=True)]
+Params are: [tensor([[ 1.9954],
+        [-3.3995]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3995]], requires_grad=True), tensor([4.1988], requires_grad=True)]
+Params are: [tensor([[ 1.9948],
+        [-3.3995]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3999]], requires_grad=True), tensor([4.1987], requires_grad=True)]
+Params are: [tensor([[ 1.9951],
+        [-3.3999]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3993]], requires_grad=True), tensor([4.1986], requires_grad=True)]
+Params are: [tensor([[ 1.9957],
+        [-3.3993]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Params are: [tensor([[ 1.9967],
+        [-3.3985]], requires_grad=True), tensor([4.1979], requires_grad=True)]
+Estimated w: tensor([[ 1.9967],
+        [-3.3985]], requires_grad=True) 
+ Estimated b: tensor([4.1975], requires_grad=True)
 </pre>
 </div>
 </div>
