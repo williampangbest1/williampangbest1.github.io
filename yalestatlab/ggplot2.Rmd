@@ -33,6 +33,7 @@ It's always a good habit to do a quick scan of the data to contextualize what's 
 ```{r, results = 'hide'}
 head(bias, n = 2)
 ```
+
 What's we're looking at is a dataset of policing by counties in Mississippi, with some statistics about the number of Black and White drivers being pulled over. The research question from this dataset is whether there is any racial bias in police stopping -- perhaps we want to plot some sort of scatterplot comparing the percent of Black stopped vs percent of White stopped. 
 
 Before we jump into the coding, the first thing to know about `ggplot` is that it works in layers, sort of like a cake! The bottom layer is your data, and you can layers things on top to make an increasingly sophisticated graph. 
