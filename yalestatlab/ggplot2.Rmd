@@ -124,7 +124,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped, color = pc
   geom_point()
 ```
 
-You might have initially thought that the `color` argument would go into the geometries layer. However, this is not the case, because what we're *conceptually* doing is creating a new column in our dataset, creating a TRUE/FALSE statement (i.e., whether the percent of Blacks stopped is greater than 0.2), and then mapping it onto the plane using the `geom_point` function. 
+You might have initially thought that the `color` argument would go into the geometries layer. However, this is not the case, because what we're *conceptually* doing is creating a new column in our dataset, creating a TRUE/FALSE statement (i.e., whether the percent of Whites stopped is greater than 0.1), and then mapping it onto the plane using the `geom_point` function. 
 
 Similarly, if we wanted to change something about the properties of the dots themselves (say we wanted to change the color), we would put our arguments into the `geom_point` function.
 
@@ -136,7 +136,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
 Interesting! Just by visual inspection we see that there's something interesting going on there, as a lot of points seem to be aggregated below the reference line. We can "zoom in" by tweaking `scale_x_continuous` and `scale_y_continuous`:
 
 ```{r}
-ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped, color = pct_white_stopped < 0.1)) + 
+ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) + 
   geom_abline(slope = 1, intercept = 0, color = 'red') +
   scale_x_continuous(limits = c(0, 0.1)) +
   scale_y_continuous(limits = c(0, 0.1)) +
