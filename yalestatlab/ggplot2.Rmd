@@ -1,5 +1,5 @@
 ---
-title: "Visualization with ggplot"
+title: "Visualization with ggplot2"
 author: "Presented by William Pang"
 date: 'Last Revised: 2022-08-23'
 output: html_document
@@ -92,6 +92,7 @@ You can play around with the `geom_point` argument — for instance, you don't w
 ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
   geom_point(shape = 'square', alpha = 0.3) # Notice that we need to put quotations on 'square', as the argument 'square' is not piped from our dataset
 ```
+
 Anyway, let's get back to our original research question, which is to see if there is any bias in police stops. To do this, we should plot a 45$^\circ$ degree reference line (or a slope of m = 1 because y = x) on the scatterplot. If the dots fall on the reference line, this means that there is no bias (e.g., in a county where 30% of Whites are stopped and 30% of Blacks are also stopped, the dot would fall on the reference line). 
 
 We can achieve this with the `geom_abline` function, which draws a line from a to b.
@@ -101,6 +102,7 @@ ggplot(data = bias) +
   geom_point(aes(x = pct_black_stopped, y = pct_white_stopped)) +
   geom_abline(slope = 1, intercept = 0, color = 'red')
 ```
+
 Hmmm, something seems to be off, as what I wanted was the line to cut diagonally on the plane. This is because the y and x axis are scaled differently - if we wanted the slope to cut diagonally, the two axis have to be the same. We can do this using the `scale_x_continuous` and `scale_y_continous` argument.
 
 ```{r}
@@ -120,6 +122,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped, color = pc
   scale_y_continuous(limits = c(0, 1)) +
   geom_point()
 ```
+
 You might have initially thought that the `color` argument would go into the geometries layer. However, this is not the case, because what we're *conceptually* doing is creating a new column in our dataset, creating a TRUE/FALSE statement (i.e., whether the percent of Blacks stopped is greater than 0.2), and then mapping it onto the plane using the `geom_point` function. 
 
 Similarly, if we wanted to change something about the properties of the dots themselves (say we wanted to change the color), we would put our arguments into the `geom_point` function.
@@ -138,6 +141,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped, color = pc
   scale_y_continuous(limits = c(0, 0.1)) +
   geom_point()
 ```
+
 Here the `color` argument is redundant because we have scaled the axis in a way that would only capture `pct_white_stopped` to be < 0.1. Notice that we also get a warning that some values are cut of because we have essentially cropped our graph.
 
 Really, we've covered the hardest part of the workshop, which is getting used to the language and syntax of `ggplot`. Once we know how the toolkit belt works, what we're really doing now is adding more and more tools into the belt. So give yourselves a pat in the back.
@@ -174,6 +178,7 @@ ggplot(data = bias, aes(x = county_name, y = wb_delta)) +
   coord_flip() +
   scale_y_reverse(limits = c(1,-1)) # You could also just use scale_y_reverse() 
 ```
+
 We can also reorder the counties by the `wb_delta` values, from lowest (indicating Black bias) to highest (indicating White bias).
 
 ```{r}
@@ -181,6 +186,7 @@ ggplot(bias, aes(x = reorder(county_name, -wb_delta), y = wb_delta)) +
   geom_col() + 
   coord_flip()
 ```
+
 Before I forget to mention, we could also simplify the code a bit (which I should have done previously, but for illustrative purposes I copied everything out) by assigning everything before `geom_col()` to `p`.
 
 ```{r}
@@ -189,6 +195,7 @@ p <- ggplot(bias, aes(x = reorder(county_name, -wb_delta), y = wb_delta)) +
 
 p + coord_flip()
 ```
+
 Okay, so I think we've exhausted this dataset  - let's work with an extension of the police stops dataset which we will call `reasons`.
 
 ```{r, results = 'hide'}
@@ -200,6 +207,7 @@ Again, it's a good habit to look at both the `spec` output from `read_csv` and s
 ```{r, results = 'hide'}
 head(reasons, n = 2)
 ```
+
 Another way to get to know your data is to build a bar graph, especially when we're working with categorical variables. This can be done with the `geom_bar` function.
 
 ```{r}
@@ -268,6 +276,7 @@ Now, let's try plotting it out.
 ggplot(dow_violations, aes(x = wk_day, y = n)) +
   geom_line()
 ```
+
 Woah! This wasn't what we wanted! What happened here is that `ggplot` displayed the range of values for each day of the week. Let's fix this by adding the `group` argument.
 
 ```{r}
@@ -281,6 +290,7 @@ That's better. But we don't know which line corresponds to which violation. To d
 ggplot(dow_violations, aes(x = wk_day, group = violation, y = n, color = violation)) +
   geom_line()
 ```
+
 If you notice the days of the week, they are a bit messed up. As we've seen a few times before, R usually arranges categorical variables (even date class) by alphabetical order. To fix this problem, we need to manually specify what the order should be by forcing it as a `factor`. Remember that whenever you need variables to be arranged in a particular order, use factors as factors not only store the variables of interest, but assigns an index to them.
 
 ```{r}
@@ -304,6 +314,7 @@ ggplot(dow_violations, aes(x = wk_day, y = n, group = violation)) +
      geom_line() +
      facet_wrap(~ violation)
 ```
+
 Notice the `~` tilde. The tilde can be read as "by" - semantically, this would be equivalent to [saying](https://bookdown.org/yih_huynh/Guide-to-R-Book/facet-wrapping.html) "I want to make new graphs separated by the cut categories". 
 
 We can force the facet wrap to have 2 columns, i.e., a 3x2 grid. Let's also rename the `y` label to something else other than n and remove the `x` label because the day of week is pretty intuitive.
