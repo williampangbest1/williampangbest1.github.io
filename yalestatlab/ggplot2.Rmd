@@ -9,9 +9,6 @@ output: html_document
 # Needed for R Markdown
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
-
-# Needed for workshop code
-library(tidyverse)
 ```
 
 *This workshop mostly follows a wonderful [tutorial](https://cengel.github.io/R-data-viz/) created by [Claudia Engel](https://profiles.stanford.edu/claudia-engel), an academic technology specialist and lecturer in Anthropology at Stanford University. However, I've edited Engel's tutorial to place more emphasis behind the syntax logic of `ggplot`.*
@@ -25,6 +22,11 @@ Today, we'll be working with a dataset from the [Stanford Open Policing Project]
 We will use the `read_csv` [function](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html), which allows for us to define the class types of the data we want read in. 
 
 ```{r, results = 'hide'}
+# You will need to load up tidyverse. If you do not have the package, use the command install.packages("tidyverse")
+
+library(tidyverse)
+
+# Read the CSV
 bias <- read_csv("https://raw.githubusercontent.com/cengel/R-data-viz/master/data/MS_stops_by_county.csv")
 ```
 
@@ -99,16 +101,16 @@ Anyway, let's get back to our original research question, which is to see if the
 We can achieve this with the `geom_abline` function, which draws a line from a to b.
 
 ```{r}
-ggplot(data = bias) +
-  geom_point(aes(x = pct_black_stopped, y = pct_white_stopped)) +
+ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
+  geom_point() +
   geom_abline(slope = 1, intercept = 0, color = 'red')
 ```
 
 Hmmm, something seems to be off, as what I wanted was the line to cut diagonally on the plane. This is because the y and x axis are scaled differently - if we wanted the slope to cut diagonally, the two axis have to be the same. We can do this using the `scale_x_continuous` and `scale_y_continous` argument.
 
 ```{r}
-ggplot(data = bias) +
-  geom_point(aes(x = pct_black_stopped, y = pct_white_stopped)) +
+ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
+  geom_point() +
   geom_abline(slope = 1, intercept = 0, color = 'red') +
   scale_x_continuous(limits = c(0, 1)) +
   scale_y_continuous(limits = c(0, 1)) 
@@ -143,7 +145,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
   geom_point()
 ```
 
-Here the `color` argument is redundant because we have scaled the axis in a way that would only capture `pct_white_stopped` to be < 0.1. Notice that we also get a warning that some values are cut of because we have essentially cropped our graph.
+Notice that we also get a warning that some values are cut of because we have essentially cropped our graph.
 
 Really, we've covered the hardest part of the workshop, which is getting used to the language and syntax of `ggplot`. Once we know how the toolkit belt works, what we're really doing now is adding more and more tools into the belt. So give yourselves a pat in the back.
 
@@ -230,7 +232,7 @@ ggplot(data = reasons, aes(x = violation, y = after_stat(count/ sum(count) * 100
   geom_bar()
 ```
 
-We could also change the colors of the bar — but instead of using the `color` function, we can use `fill`. 
+We could also change the colors of the bar — but instead of using the `color` function (which just creates a green border for each bar), we can use `fill`. 
 
 ```{r}
 ggplot(data = reasons, aes(x = violation)) + 
@@ -268,7 +270,7 @@ dow_violations <- reasons %>%
   group_by(wk_day, violation) %>% 
   count()
 
-head(dow_violations, n=2)
+head(dow_violations, n=6)
 ```
 
 Now, let's try plotting it out.
@@ -278,7 +280,7 @@ ggplot(dow_violations, aes(x = wk_day, y = n)) +
   geom_line()
 ```
 
-Woah! This wasn't what we wanted! What happened here is that `ggplot` displayed the range of values for each day of the week. Let's fix this by adding the `group` argument.
+Woah! This wasn't what we wanted! What happened here is that `ggplot` displayed the range of values for each day of the week (on Friday, for example, we see the range to be [564 (Breaks-Lights-etc), 20767 (Speeding)]. Let's fix this by adding the `group` argument.
 
 ```{r}
 ggplot(dow_violations, aes(x = wk_day, group = violation, y = n)) +
