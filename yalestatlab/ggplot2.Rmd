@@ -9,6 +9,7 @@ output: html_document
 # Needed for R Markdown
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
+library(tidyverse)
 ```
 
 *This workshop mostly follows a wonderful [tutorial](https://cengel.github.io/R-data-viz/) created by [Claudia Engel](https://profiles.stanford.edu/claudia-engel), an academic technology specialist and lecturer in Anthropology at Stanford University. However, I've edited Engel's tutorial to place more emphasis behind the syntax logic of `ggplot`.*
@@ -21,11 +22,13 @@ Today, we'll be working with a dataset from the [Stanford Open Policing Project]
 
 We will use the `read_csv` [function](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html), which allows for us to define the class types of the data we want read in. 
 
-```{r, results = 'hide'}
+```{r, eval = FALSE}
 # You will need to load up tidyverse. If you do not have the package, use the command install.packages("tidyverse")
 
 library(tidyverse)
+```
 
+```{r, results = 'hide'}
 # Read the CSV
 bias <- read_csv("https://raw.githubusercontent.com/cengel/R-data-viz/master/data/MS_stops_by_county.csv")
 ```
@@ -96,7 +99,7 @@ ggplot(data = bias, aes(x = pct_black_stopped, y = pct_white_stopped)) +
   geom_point(shape = 'square', alpha = 0.3) # Notice that we need to put quotations on 'square', as the argument 'square' is not piped from our dataset
 ```
 
-Anyway, let's get back to our original research question, which is to see if there is any bias in police stops. To do this, we should plot a 45$^\circ$ degree reference line (or a slope of m = 1 because y = x) on the scatterplot. If the dots fall on the reference line, this means that there is no bias (e.g., in a county where 30% of Whites are stopped and 30% of Blacks are also stopped, the dot would fall on the reference line). 
+Anyway, let's get back to our original research question, which is to see if there is any bias in police stops. I'm not sure if you've seen graphs scatterplots where they [plot](https://www.youtube.com/watch?v=kEc-S0XMSyw) the female literacy rates against male literacy rates and each "dot" represents a country, or other similar scatterplots where a diagonal line cuts through the axis coordinates to demonstrate some kind of imbalance. But the idea here is that we plot a 45$^\circ$ degree reference line (or a slope of m = 1 because y = x) on the scatterplot. If the dots fall on the reference line, this means that there is no bias (e.g., in a county where 30% of Whites are stopped and 30% of Blacks are also stopped, the dot would fall on the reference line). 
 
 We can achieve this with the `geom_abline` function, which draws a line from a to b.
 
