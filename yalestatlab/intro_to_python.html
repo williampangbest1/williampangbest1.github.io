@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Introduction to Python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>intro_to_python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14466,7 +14466,7 @@ Exponential: 9
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To perform division, we use the <code>\</code> operator. And to perform a floor division that only returns the largest integer (i.e., the decimal points gets truncated and we are returned an integer), we use the <code>\\</code> operator.</p>
+<p>To perform division, we use the <code>/</code> operator. And to perform a floor division that only returns the largest integer (i.e., the decimal points gets truncated and we are returned an integer), we use the <code>//</code> operator.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14792,11 +14792,11 @@ Multiplied by 10: 10
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Method 1: Last item on the list: </span><span class="si">{</span><span class="n">ivies</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Method 2 (Preferred): Last item on the list: </span><span class="si">{</span><span class="n">ivies</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Method 2 (Preferred): Last item on the list </span><span class="si">{</span><span class="n">ivies</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14815,10 +14815,15 @@ Multiplied by 10: 10
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Method 1: Last item on the list: Dartmouth
-Method 2 (Preferred): Last item on the list: Dartmouth
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/8l/3q8kb6cj4jjd1fdhszldztsc0000gn/T/ipykernel_2909/2818336926.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#34;Method 1: Last item on the list: {ivies[3]}&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#34;Method 2 (Preferred): Last item on the list {ivies[-1]}&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;ivies&#39; is not defined</pre>
 </div>
 </div>
 
@@ -14935,7 +14940,7 @@ Print last 2 items: [&#39;Brown&#39;, &#39;Dartmouth&#39;]
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ivies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Yale&#39;</span><span class="p">,</span> <span class="s1">&#39;Harvard&#39;</span><span class="p">,</span> <span class="s1">&#39;Brown&#39;</span><span class="p">,</span> <span class="s1">&#39;Dartmouth&#39;</span><span class="p">]</span>        <span class="c1"># Resetting the ivies variable </span>
 <span class="n">new_school</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Stanford&#39;</span><span class="p">]</span>
 
-<span class="n">check</span> <span class="o">=</span> <span class="n">ivies</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_school</span><span class="p">)</span>
+<span class="n">ivies</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_school</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ivies</span><span class="p">)</span>
 </pre></div>
 
@@ -15800,7 +15805,7 @@ Dartmouth
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -15846,13 +15851,13 @@ Dartmouth
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Say we had some bug in our code and that if we keep printing the list it will print 4's ad infinitum. We want the loop to stop as num hits 4, hence avoiding an unnecessary long print statement.</p>
+<p>Say we had some bug in our code and that if we keep printing the list it will print 4's ad infinitum. We want the loop to stop as <code>number</code> hits 4, hence avoiding an unnecessary long print statement.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
@@ -15894,7 +15899,7 @@ We&#39;ve hit four. Stop printing!
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In some cases, however, we might not care about the crazy long statement and prefer to tell the user that we're continuously printing 4, and this bug really needs to be fixed ASAP.</p>
+<p>In some cases, however, we might <em>want</em> the crazy long statement so we can tell the user that we're continuously printing 4, and that this bug really needs to be fixed ASAP.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16098,7 +16103,7 @@ There are also times when you want to run through a loop a certain amount of tim
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As we've seen over and over again, Python initializes from 0. There is, thankfully, a way to set the loop so it initializes from 1.</p>
+<p>As we've seen over and over again, Python initializes from 0. There is also a way to set the loop so it initializes from 1.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
