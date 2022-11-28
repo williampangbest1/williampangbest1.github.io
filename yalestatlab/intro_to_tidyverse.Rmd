@@ -1,0 +1,322 @@
+---
+title: "Introduction to Tidyverse"
+author: "Presented by William Pang"
+date: 'Last Revised: November 28, 2022'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Needed for R Markdown
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+
+# Needed for workshop code
+library(tidyverse)
+```
+
+### Introduction and Some Basics
+
+This tutorial assumes a basic understanding of R functions and some of its basic properties. However, to ensure everyone is brought up to speed, I will mix in a review of some basic concepts in this workshop. If you are struggling to follow this material, I highly suggest reviewing the ["First Steps with R"](https://marx.library.yale.edu/data-gis-statlab/statlab/workshops/statistical-support-workshop-materials) tutorial that can be found on the [StatLab](https://marx.library.yale.edu/data-gis-statlab/statlab) website.
+
+To assign a variable in R, we use the leftward operator `<-`, which is unlike most other languages that utilizes `=`. Let's try assigning a variable:
+
+```{r, include = TRUE}
+a <- 3
+b <- 15
+
+a + b # Finding the sum of a and b
+```
+
+Here we have created two objects in R — the variable ```a``` and ```b```. 
+
+Another way to do this is to create a vector containing ```a``` and ```b```, and use the ```sum``` function to add everything in the newly created vector.
+
+```{r, include = TRUE}
+vectorSum <- c(a,b)
+
+# Utilizing the sum function
+sum(vectorSum)
+```
+
+If you're using R studio, you can find the objects stored in the environment tab on the right hand corner of your screen. Another way to check that the object is created is to type ```a``` (if you're familiar with linux operating systems, you can also use the ```ls()``` function to list the "working directory" of variables).
+
+### Installing and Loading Packages
+You might have heard or already used packages such as ```tidyverse```, ```dplyr```, and other packages that pertain to the statistical analysis that you're doing. As a quick refresher, packages — which are essentially a set of functions (think of it as buying kitchen appliances) — needs to first be installed on your local machine. To do so, you can utilize the ```install.packages``` function. 
+
+For this example, we would like to install the ```tidyverse``` and ```dplyr``` in one line. Recall that we can use the combine argument, ```c("packageOne", "packageTwo")```.
+
+```{r, include = TRUE, eval = FALSE}
+packages <- c("tidyverse","shiny")
+install.packages(packages)
+```
+
+If this is your first time installing the package onto your local machine, you should see a bunch of red text followed by the word *downloaded: size of file*. 
+
+```{r, include = TRUE, eval = FALSE}
+library(dplyr)
+library(tidyverse)
+```
+
+### Reading in Data Files
+If you're here, I'm assuming that your favorite function is `read.csv`. However, `read.csv` might not be the best practice if you're reading in data from other sources, especially data that contains dates which can become very messy in the long run. It's good practice to know the classes of your data before tooling around with it — knowing your data types early can prevent a lot of potential headaches down the line.
+
+To "force" variable classes in the different variables in your dataset, we use the `read_csv` command (as opposed to the read.csv command) that is part of the `tidyverse` package. Today, we'll be working with a fun Pokemon dataset that is available on [Github](https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv).
+
+```{r}
+pokemon <- read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv')
+```
+
+Great, if you now look at your console, you can see that we're given information about the classes of the dataset. It's always great to do a quick scan of this to see whether anything is weird. Just for fun, I tried using the `read.csv` function to read the pokemon dataset, and I noticed that `read.csv` reads in data with numbers as an interger type, whereas the `read_csv` reads numbers as a numeric/double type. 
+
+This is not awfully important for most of your use cases (other than the fact that integers uses less memory, which doesn't really affect our usecase but might be a problem when you're working with million and million of rows of data and data storage is expensive!). Anyway, sorry for that small tangent, but I'm assuming some of you might work with very large datasets in the future, so it's always good to think about storage and that storage costs computational time and money!
+
+Okay, now let's pull out the full column specification. To do so, we call:
+
+```{r, eval = FALSE}
+spec(pokemon)
+```
+
+Notice that the `legendary` column is grouped under `lgl`, which means logical, or a boolean type (that is, a variable that will only give you TRUE or FALSE). 
+
+So why is it important that we know that this is a logical class type? For instance, we want out how many of the 800 Pokemons are legendary. 
+
+```{r}
+sum(pokemon$Legendary)
+```
+
+Say that the legendary variable was of the ```chr``` character class. Let's hold this thought for now as I show you how to force the variable class for the data you're reading. 
+
+```{r, results = 'hide', eval = FALSE}
+pokemon <- read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv',
+  col_types = cols(
+  `#` = col_double(),
+  Name = col_character(),
+  `Type 1` = col_character(),
+  `Type 2` = col_character(),
+  HP = col_double(),
+  Attack = col_double(),
+  Defense = col_double(),
+  `Sp. Atk` = col_double(),
+  `Sp. Def` = col_double(),
+  Speed = col_double(),
+  Generation = col_double(),
+  Legendary = col_character() # Changed from col_logical()
+  )
+)
+```
+
+Now let's try summing up the legendary variable to find out the number of legendary Pokemons in our Pokedex:
+
+```{r, eval = FALSE}
+sum(pokemon$Legendary)
+```
+
+We get an error statement that says: `Error in sum(pokemon$Legendary) : invalid 'type' (character) of argument`. This is what we expect, as it tells us that the strings cannot be summed!
+
+As a reminder (or tip): if you're unfamiliar with the inputs of a function, it's always useful to consult ```?functionName```. In this case, it would be ```?read_csv```.
+
+### Subsetting Data
+As some of you who have played with Pokemons might know, Pokemons are classified based on types (for instance, Pikachu is an electric pokemon). In addition, some Pokemons are super strong, and they are known as legendary Pokemons. So going back to the Pokemon dataset, let's do some exploratory data analysis:
+
+```{r}
+table(pokemon$Legendary) # Create a frequency table for legendary Pokemons
+table(pokemon$`Type 1`) # Create a frequency table to see Pokemon types
+prop.table(table(pokemon$Legendary))
+```
+
+Okay, so we were able to use built in R functions to get some basic summary statistics. But what happens if we want to get more than just the proportions of legendary Pokemon but also learn something more about their attributes as a group? To do so, we would need to subset the data to only look at data rows that are legendary Pokemons.
+
+```{r, eval = TRUE}
+onlyLegendary <- pokemon[pokemon$Legendary == "TRUE", ]
+summary(onlyLegendary)
+```
+
+Woah, this is a lot of information, some of which is redundant and unclear! Say I want to know the number of legendary Pokemons in our Pokeset or the mean HP among legendary Pokemons, I would need to type in my R console:
+
+```{r}
+nrow(onlyLegendary)
+mean(onlyLegendary$'HP')
+```
+
+But knowing the mean HP or the number of legendary Pokemons is not very useful if we don't compare it with something (in this case, non-legendary Pokemons). As you can already see, if we were to make a comparison with non-legendary Pokemons, we would need to create a repeat the exact same operations (i.e., subset the data, store it in a variable called `nonLegendary`, etc. ) which becomes extremely cumbersome. We'll come back to this problem a bit later, once we've familiarzed ourselves with the pipe operator.
+
+### Modifying Data
+Here we will be introducing the concept of piping, which you might have been exposed to and is part of the `dplyr` package (which is part of `tidyverse`, which you've already installed!). The main idea of piping is really to simplify your code -- you could theoretically do without piping, as you can see as we try and replicate some examples from above -- but the advantages of piping should be obvious. 
+
+**Key Idea:** The pipe function takes the output of one function and passes it into another function as an argument
+
+Let’s try doing the previous operation again, that is, to find the summary statistics of only legendary Pokemons. 
+
+```{r}
+pokemon %>% filter(Legendary == "TRUE") %>% summary()
+```
+
+Here, I used the filter function in `tidyverse`, which is equivalent to the `subset` function in base R . We can immediately see that this makes the code way more concise and easy to follow (I don’t have to create a new variable called `onlyLegendary`, or use the dollar $ symbol a million times) .
+
+I'm also going to use the opportunity to rename some of the variables in my dataset. For instance, the Pokedex number is represented with the pound `#` sign, which can be problematic as R might read it as a comment. I'm also going to rename some other variables while I'm at it for convenience in coding later. 
+
+To do so, we can use the `rename` function, where `new_variable_name = old_variable_name`. 
+
+```{r, results = 'hide'}
+pokemon %>% rename(id = `#`, legendary = Legendary, type1 = `Type 1`, type2 = `Type 2`)
+```
+
+Okay, let’s check if the variables have been renamed.
+
+```{r}
+ls(pokemon)
+```
+
+Wait, what just happened? The changes don't seem to be saved when I call the `pokemon` data frame. This is because the pipe operation outputs the data in something called a `tibble`, but does not make changes to the original dataset. This can be incredibly useful in some contexts (for instance, you want to demonstrate that you don't need to touch the original dataset for your analysis, which can be important for reproducibility), but for my purposes — which is to make the coding life a bit easier — I would like to permanently change my dataset.
+
+The simple fix would be to rewrite our `pokemon` dataset using the right arrow operator `<-`. Let's run the `ls` function again.
+
+```{r, results = 'hide'}
+pokemon <- pokemon %>% rename(id = `#`, legendary = Legendary, type1 = `Type 1`, type2 = `Type 2`)
+```
+
+```{r}
+ls(pokemon)
+```
+
+Say we want to see if there's anything interesting if we add up the total points of each Pokemon's attributes. Just to remind ourselves what we're doing, let's pull up the dataset again and look at the first two rows.
+
+```{r}
+head(pokemon, n = 2)
+```
+One question we might ask ourselves is whether Legendary Pokemons have a higher sum of points as compared to non-Legendary Pokemons. To add a new column that tabulates the total scores we need to use the mutate function and sum up the values from rows 5 to 10.
+
+```{r}
+pokemon <- pokemon %>% mutate(total = rowSums(.[5:10]))
+
+# Always good practice to check if the function is doing what we want
+print.data.frame(head(pokemon, n = 1))
+```
+
+Notice the dot `.` in the mutate function. The `.` function is equivalent to saying `rowsums(pokemon[5:10])`. But isn't this the whole point of using the pipe operator — to avoid this hassle? 
+
+Recall what the pipe function does. It takes the output of the LHS (left hand side) of the function and passes it to the RHS (right hand side).
+
+However, some functions work better at "understanding" dataframes, while others work better at interpreting one dimensional vectors. The sum function is used to add up everything in a one dimension vector -- as we saw in our very first example when I asked you to create a vector adding up `a+b`.  But recall that from the pipe function, we're feeding in a dataframe, not a specific column. 
+
+The take-home message here is to understand the general idea behind what a function is doing — and leave the nuts and bolts idiosyncrasies to Google or Stackoverflow.
+
+Anyways, back to the task at hand: We've created a new column that tallies up the total points of each Pokemon's attributes. Now the question of interest is comparing the total score of legendary Pokemons with non-Legendary Pokemons. Unfortunately, there is no clean solution using the filter function:
+
+```{r}
+onlyLegendary_avg <- pokemon %>% filter(legendary == "TRUE") %>% {sum(.$total)}/65
+notLegendary_avg <- pokemon %>% filter(legendary == "FALSE") %>% {sum(.$total)}/(800-65)
+# Print results
+onlyLegendary_avg
+notLegendary_avg
+```
+
+Full transparency: I had to Google how to do this as well; in fact, I would never remember how to write this code on my own. In practice, we would never code like this — instead, we would rely on the `group_by` function.
+
+### Collapsing Data
+Okay, let's dive into the `group_by` function. Let me first illustrate with an example and walk you through what we've done:
+
+```{r}
+pokemon %>% 
+  group_by(legendary) %>%
+  summarize(count= n(), HP = mean(HP), Attack = mean(Attack), Defense = mean(Defense))
+```
+
+As the name suggests, the `group_by` function takes a table, segments it, and then performs operations based on the specified groups.
+
+```{r, echo=FALSE}
+# Define variable containing url
+url <- "https://cengel.github.io/R-data-wrangling/img/split-apply-combine.png"
+```
+<center><img src="`r url`" style = "width: 500px; height: 400px;"></center>
+
+Let's walk through what just happened in the above function. First, the `group_by` function "split" the dataset into two sets, if you will — a [735 x 12] set and a [65 x 12] dataframe. Then, we ran a `n()` function, which counts the rows in each of the "split" dataset. The `mean()` operation was then performed on the split dataset to calculate the mean HP for legendary and nonlegendary Pokémons, as well as the mean Attack points.
+
+Cool! This is a really important function, because it has saved us a lot of time and hassle! 
+
+We can also use `group_by` with multiple arguments, such as grouping by the type of Pokémons and whether it's legendary or not. Recall from our previous hypothesis (with the help of Google) that we think there's something interesting going on with Psychic Pokémons.
+
+```{r, message = FALSE}
+stats <- pokemon %>% 
+  group_by(type1, legendary) %>%
+  summarize(count= n(), HP = mean(HP), Attack = mean(Attack), Defense = mean(Defense))
+
+stats
+# To just output Psychic Pokemons
+stats[stats$type1 == "Psychic", ]
+```
+
+### Joining Tables
+Very commonly in research, you get datasets in different csv files or tables, and you're asked to do combine the two tables for your analysis. 
+
+For the sake of demonstration, we will split the dataset into two.
+
+```{r}
+pokemon_left <- pokemon[, 1:6]
+pokemon_right <- pokemon[, 7:12]
+
+head(pokemon_left, n = 2)
+head(pokemon_right, n = 2)
+```
+
+When we join two tables together, we must first ask: What is the commonality between the first table and the second table? What is the commonality that links both tables together?
+
+Usually, there would be some kind of id (say employees id or Pokemon id) that we can reference on. Since this is a toy example and we simply halved the dataset, we would need to manually create our own indexing. Let us use the handy `mutate` function again:
+
+```{r}
+pokemon_left <- pokemon_left %>% mutate(index_left = 1:nrow(pokemon_left))
+pokemon_right <- pokemon_right %>% mutate(index_right = 1:nrow(pokemon_right))
+
+head(pokemon_left, n = 1)
+head(pokemon_right, n = 1)
+```
+
+Now, we can merge the two tables based on the index column from both tables. This is equivalent to a left_join in the database langauge SQL. 
+
+```{r}
+pokemon_merge <- merge(pokemon_left, pokemon_right, by.x = "index_left", by.y = "index_right")
+head(pokemon_merge, n = 2)
+```
+
+Since we merged based on the left table, we get this extra `index_left` column that we don't need. To remove this column, we can use the `select` function in tidyverse.
+
+```{r, eval = FALSE}
+pokemon_merge %>% select(-index_left)
+```
+
+### A soft introduction into ggplot
+Finally, we will do a soft introduction into ggplot. This is an extensive topic and requires a workshop on its own (which I also teach and notes can be found [here](https://williampangbest1.github.io/yalestatlab/ggplot2.html)), but I want to quickly highlight how ggplot and tidyverse connects together.
+
+Here's an example code that we can use to create a histogram of Pokemons type:
+
+```{r}
+ggplot(data = pokemon, aes(x = type1)) + 
+  geom_bar()
+```
+
+A few terminologies here, which again, requires a workshop in itself but for now we'll just have to memorize it. ggplot is analogous to building a multilayered cake: first, you need to specifiy the dataset you're using (`data= pokemon`). Then, we would need to define what goes into the x and y axis — this goes under `aes` , which means aesthetics mapping. Finally, we need to define what the graph looks like — do you want a bar plot, a line plot, or a dotplot? Since we're creating a histogram, we can only get a bar plot, which can be defined with `geom_bar()`.
+
+If you think about it, this is essentially a pipe operator! Note that when we define what goes into the x-axis, we didn't have to specify `pokemon$type1`, because what we're essentially doing is `pokemon %>% type1`.
+
+We can also flip the question in another way: How do we get the counts of Pokemon by type and output it as a table? We should already be able to do this by now.
+
+```{r}
+pokemon %>% group_by(type1) %>% count()
+```
+
+Let's say you were given the choice to pick one Pokemon by its type, with the goal being to pick the strongest Pokemon. Which one would you pick? We can plot it out and see.
+
+```{r}
+ggplot(data = pokemon, aes(x = type1, fill = legendary)) + 
+  geom_bar() +
+  coord_flip()
+```
+
+I would either pick a dragon type or psychic type Pokemon. Again, we could also write this with the `group_by` function:
+
+```{r, eval = FALSE}
+pokemon %>% group_by(type1, legendary) %>% count()
+```
+
+
+
