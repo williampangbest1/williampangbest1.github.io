@@ -1,0 +1,150 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ################################################################################\
+#                             BayesSparseEstimate                              #\
+#                                                                              #\
+#                                                                              #\
+#  Coded by: William Pang (william.pang@yale.edu)                              #\
+################################################################################\
+\
+#------------------------------------------------------------------------------#\
+# Set up\
+#------------------------------------------------------------------------------#\
+setwd("~") # Set your own working directory\
+\
+set.seed(12345)\
+library(MASS)\
+library(coda)\
+library(monomvn)\
+library(MCMCvis)\
+library(msm)\
+library(mnormt)\
+library(knitr)\
+library(tidyverse)\
+\
+source("bayesian_ridge_regression.R")\
+source("bayesian_iid_regression.R")\
+source("bayesian_ssvs_regression.R")\
+source("bayesian_zellner_regression.R")\
+source("bayesian_lasso_regression.R")\
+\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+# Part 1: Generating Data\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+\
+n <- 1000 # Number of samples\
+predictors <- 100 # Number of predictors\
+intercept_control <- -3.12 # Used to fine tunehow 'rare' the data is\
+burn_in <- 10000\
+mcmc_samples <- 100000\
+\
+x <- matrix(0, nrow = n, ncol = predictors)\
+b_true <- abs(rnorm(n = predictors, mean = 0, sd = 0.5))\
+\
+b_true[1] = 5\
+\
+for (i in 1:n)\{\
+  x[i, ] <- mvrnorm(n = predictors, mu = 0, Sigma = 1)\
+\}\
+\
+z <- x%*%b_true + intercept_control # Create linear regression\
+pr <- 1/(1+exp(-z)) #logit function\
+y <- rbinom(n, 1, pr) # Transform probability into 0 and 1s\
+cases_percent <- 100*sum(y)/n\
+\
+############################## Running glm ##################################\
+X <- as.data.frame(x)\
+results <- glm(y~., X, family = "binomial")\
+glm_confint <- confint(results)\
+glm_confint <- cbind(unname(results$coefficients), glm_confint)\
+\
+############################## Including intercept in dataset #################\
+intercept <- matrix(intercept_control, nrow = n, ncol = 1)\
+x <- cbind(intercept, x)\
+p <- predictors + 1\
+\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+# Part 2: Running regression models\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+\
+beta_iid <- bayesian_iid_regression(n, p, y, x, mcmc_samples)\
+beta_ridge <- bayesian_ridge_regression(n, p, y, x, mcmc_samples)\
+beta_ssvs <- bayesian_ssvs_regression(n, p, y, x, mcmc_samples)\
+beta_zellner <- bayesian_zellner_regression(n, p, y, x, mcmc_samples)\
+beta_lasso <- bayesian_lasso_regression(n, p, y, x, mcmc_samples)\
+\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+# Part 3: Getting mean and credible intervals \
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+\
+create_confint <- function(beta_method)\{\
+  store_matrix <- matrix(0, nrow = p, ncol = 3)\
+  for (i in 1:p)\{\
+    store_matrix[i, 1] <- mean(beta_method[burn_in:mcmc_samples, i])\
+    quantile <- unname(\
+      quantile(beta_method[burn_in:mcmc_samples, i], probs = c(0.025, 0.975)))\
+    store_matrix[i, 2] <- quantile[1]\
+    store_matrix[i, 3] <- quantile[2]\
+  \}\
+return(store_matrix)\
+\}\
+\
+beta_iid_confint <- create_confint(beta_iid)\
+beta_ridge_confint <- create_confint(beta_ridge)\
+beta_ssvs_confint <- create_confint(beta_ssvs)\
+beta_zellner_confint <- create_confint(beta_zellner)\
+beta_lasso_confint <- create_confint(beta_lasso)\
+\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+# Part 4: Plotting the intervals\
+#-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*------#\
+\
+create_plot <- function(beta_method_confint, name)\{\
+  label <- paste0("b", 1:predictors)\
+  label <- append("Intcpt", label)\
+  \
+  df <- data.frame(label, mean = beta_method_confint[, 1], lower_2.5 = beta_method_confint[, 2],\
+                   upper_97.5 = beta_method_confint[, 3])\
+  \
+  df$label <- factor(df$label, levels=df$label)\
+  \
+\
+############## Tweaking plots to choose how many betas to show #################\
+  df <- df[-1, ] # Remove intercept\
+  df <- df[1:5, ] # Keep first 5 betas\
+  \
+  fp <- ggplot(data=df, aes(x=label, y=mean, ymin=lower_2.5, ymax=upper_97.5))+\
+    geom_pointrange(size = 0.3) + # Adjust dot and CI line size\
+    geom_point(aes(x = 1, y = b_true[1]), shape = 8, color = "red")+ \
+    xlab("estimated betas") + ylab("Mean (95% Interval)") +\
+    labs(title = name) +\
+    theme_bw() + # Use a white background \
+    theme(axis.text.x = element_text(angle = 90, size = 10)) # Adjust size of label\
+ \
+  return(fp) \
+\}\
+\
+beta_iid_plot <- create_plot(beta_iid_confint, "iid")\
+ggsave("beta_iid_plot.png", plot = beta_iid_plot)\
+beta_ridge_plot <- create_plot(beta_ridge_confint, "ridge")\
+ggsave("beta_ridge_plot.png", plot = beta_ridge_plot)\
+beta_ssvs_plot <- create_plot(beta_ssvs_confint, "ssvs")\
+ggsave("beta_ssvs_plot.png", plot = beta_ssvs_plot)\
+beta_zellner_plot <- create_plot(beta_zellner_confint, "zellner")\
+ggsave("beta_zellner_plot.png", plot = beta_zellner_plot)\
+beta_glm_plot <- create_plot(glm_confint, "glm")\
+ggsave("beta_glm_plot.png", plot = beta_glm_plot)\
+beta_lasso_plot <- create_plot(beta_lasso_confint, "lasso")\
+ggsave("beta_lasso_plot.png", plot = beta_lasso_plot)\
+\
+beta_iid_plot\
+beta_ridge_plot\
+beta_ssvs_plot\
+beta_zellner_plot\
+beta_glm_plot\
+beta_lasso_plot}
