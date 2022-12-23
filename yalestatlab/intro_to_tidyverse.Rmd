@@ -43,7 +43,7 @@ If you're using R studio, you can find the objects stored in the environment tab
 ### Installing and Loading Packages
 You might have heard or already used packages such as ```tidyverse```, ```dplyr```, and other packages that pertain to the statistical analysis that you're doing. As a quick refresher, packages — which are essentially a set of functions (think of it as buying kitchen appliances) — needs to first be installed on your local machine. To do so, you can utilize the ```install.packages``` function. 
 
-For this example, we would like to install the ```tidyverse``` and ```shiny``` in one line (note: we won't be using shiny in this tutorial). Recall that we can use the combine argument, ```c("packageOne", "packageTwo")```.
+For this example, we would like to install the ```tidyverse``` and ```dplyr``` in one line. Recall that we can use the combine argument, ```c("packageOne", "packageTwo")```.
 
 ```{r, include = TRUE, eval = FALSE}
 packages <- c("tidyverse","shiny")
@@ -52,11 +52,9 @@ install.packages(packages)
 
 If this is your first time installing the package onto your local machine, you should see a bunch of red text followed by the word *downloaded: size of file*. 
 
-Every time you use a new R session/R file, you need to load packages using the function . This is akin to saying that I bought a food processor in my apartment (i.e., installing the package) and that I will be using the food processor for my recipe (i.e., loading the packages).
-
 ```{r, include = TRUE, eval = FALSE}
+library(dplyr)
 library(tidyverse)
-library(shiny)
 ```
 
 ### Reading in Data Files
@@ -68,7 +66,7 @@ To "force" variable classes in the different variables in your dataset, we use t
 pokemon <- read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv')
 ```
 
-Great, if you now look at your console, you can see that we're given information about the classes of the dataset. It's always great to do a quick scan of this to see whether anything is weird. Just for fun, I tried using the `read.csv` function to read the Pokemon dataset, and I noticed that `read.csv` reads in data with numbers as an integer type, whereas the `read_csv` reads numbers as a numeric/double type. 
+Great, if you now look at your console, you can see that we're given information about the classes of the dataset. It's always great to do a quick scan of this to see whether anything is weird. Just for fun, I tried using the `read.csv` function to read the pokemon dataset, and I noticed that `read.csv` reads in data with numbers as an interger type, whereas the `read_csv` reads numbers as a numeric/double type. 
 
 This is not awfully important for most of your use cases (other than the fact that integers uses less memory, which doesn't really affect our usecase but might be a problem when you're working with million and million of rows of data and data storage is expensive!). Anyway, sorry for that small tangent, but I'm assuming some of you might work with very large datasets in the future, so it's always good to think about storage and that storage costs computational time and money!
 
@@ -236,7 +234,7 @@ Let's walk through what just happened in the above function. First, the `group_b
 
 Cool! This is a really important function, because it has saved us a lot of time and hassle! 
 
-We can also use `group_by` with multiple arguments, such as grouping by the type of Pokémons and whether it's legendary or not. With the help of Google, I realized that there might be something special about legendary Psychic Pokémons. Let's see what's going on:
+We can also use `group_by` with multiple arguments, such as grouping by the type of Pokémons and whether it's legendary or not. Recall from our previous hypothesis (with the help of Google) that we think there's something interesting going on with Psychic Pokémons.
 
 ```{r, message = FALSE}
 stats <- pokemon %>% 
@@ -296,7 +294,7 @@ ggplot(data = pokemon, aes(x = type1)) +
   geom_bar()
 ```
 
-A few terminologies here, which again, requires a workshop in itself but for now we'll just have to memorize it for now. ggplot is analogous to building a multilayered cake: first, you need to specifiy the dataset you're using (`data= pokemon`). Then, we would need to define what goes into the x and y axis — this goes under `aes` , which means aesthetics mapping. Finally, we need to define what the graph looks like — do you want a bar plot, a line plot, or a dotplot? Since we're creating a histogram, we can only get a bar plot, which can be defined with `geom_bar()`.
+A few terminologies here, which again, requires a workshop in itself but for now we'll just have to memorize it. ggplot is analogous to building a multilayered cake: first, you need to specifiy the dataset you're using (`data= pokemon`). Then, we would need to define what goes into the x and y axis — this goes under `aes` , which means aesthetics mapping. Finally, we need to define what the graph looks like — do you want a bar plot, a line plot, or a dotplot? Since we're creating a histogram, we can only get a bar plot, which can be defined with `geom_bar()`.
 
 If you think about it, this is essentially a pipe operator! Note that when we define what goes into the x-axis, we didn't have to specify `pokemon$type1`, because what we're essentially doing is `pokemon %>% type1`.
 
@@ -319,3 +317,6 @@ I would either pick a dragon type or psychic type Pokemon. Again, we could also 
 ```{r, eval = FALSE}
 pokemon %>% group_by(type1, legendary) %>% count()
 ```
+
+
+
