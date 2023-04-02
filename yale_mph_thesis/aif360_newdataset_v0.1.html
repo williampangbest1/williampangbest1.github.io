@@ -16167,6 +16167,7 @@ Corresponding Theil index value: 0.0329
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>With the weights being changed, we were able to achieve a best accuracy of 0.8947 with a disparitiy index lower than 0.2, which in AIF360's definition means that the dataset is fair.</p>
 <p>We can also display the <a href="https://aif360.readthedocs.io/en/latest/modules/generated/aif360.sklearn.metrics.average_odds_difference.html">average odds difference</a>, which returns the average of the difference in FPR and TPR for the unprivileged and privileged groups. A value of 0 implies both groups have equal benefit (which is what we want!).</p>
+<p>$\text{Average odds difference} = \frac{(FPR_{unpriv}-FPR_{priv})+(TPR_{unpriv}-TPR_{priv})}{2}$</p>
 
 </div>
 </div>
