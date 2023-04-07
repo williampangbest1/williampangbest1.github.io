@@ -289,6 +289,12 @@ Depending on the datset, you might want it to be either wide or long. Most datas
 
 The way I like to remember the difference between wide and long is that the long format repeats variable names in the first column, whereas a wide format does not.
 
+```{r, echo=FALSE}
+# Define variable containing url
+url_2 <- "https://raw.githubusercontent.com/williampangbest1/williampangbest1.github.io/main/img/tidyverse_widelong_1.png"
+```
+<center><img src="`r url_2`" style = "width: 500px; height: 400px;"></center>
+
 Let's go back to our Pokemon example and subset it by `HP, Attack, Defense` to make it more manageable.
 
 ```{r}
