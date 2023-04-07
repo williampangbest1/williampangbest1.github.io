@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Tidyverse"
 author: "Presented by William Pang"
-date: 'Last Revised: November 28, 2022'
+date: 'Last Revised: April 7, 2023'
 output: html_document
 ---
 
@@ -282,6 +282,32 @@ Since we merged based on the left table, we get this extra `index_left` column t
 
 ```{r, eval = FALSE}
 pokemon_merge %>% select(-index_left)
+```
+
+### Wide to long conversion
+Depending on the datset, you might want it to be either wide or long. Most datasets that you download/use will be in wide format, as it is easier to interpret and visualize. However, most of the processes running behind R using long, and if you're writing custom functions to help with visualizations, it might be required to feed the dataset as a long format.
+
+The way I like to remember the difference between wide and long is that the long format repeats variable names in the first column, whereas a wide format does not.
+
+Let's go back to our Pokemon example and subset it by `HP, Attack, Defense` to make it more manageable.
+
+```{r}
+pokemon_wide <- pokemon[, c("Name", "HP", "Attack", "Defense")]
+head(pokemon_wide, n = 6);
+```
+
+Then, convert the table from wide to long using the `gather` function. Note that the `gather` function takes in three arguments: (1) The key (2) the value (3) the variables we want to group by (which will be displayed in key).
+
+```{r}
+pokemon_long <- pokemon_wide %>% gather(ability, value, HP:Defense);
+head(pokemon_long, n = 6);
+```
+
+To transform a dataset from long to wide, we can use the `spread` function. 
+
+```{r}
+pokemon_wide1 <- pokemon_long %>% spread(ability, value)
+head(pokemon_wide1, n= 6)
 ```
 
 ### A soft introduction into ggplot

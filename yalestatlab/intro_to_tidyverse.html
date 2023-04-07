@@ -364,7 +364,7 @@ pre code {
 
 <h1 class="title toc-ignore">Introduction to Tidyverse</h1>
 <h4 class="author">Presented by William Pang</h4>
-<h4 class="date">Last Revised: November 28, 2022</h4>
+<h4 class="date">Last Revised: April 7, 2023</h4>
 
 </div>
 
@@ -815,6 +815,59 @@ head(pokemon_merge, n = 2)</code></pre>
 <code>index_left</code> column that we don’t need. To remove this
 column, we can use the <code>select</code> function in tidyverse.</p>
 <pre class="r"><code>pokemon_merge %&gt;% select(-index_left)</code></pre>
+</div>
+<div id="wide-to-long-conversion" class="section level3">
+<h3>Wide to long conversion</h3>
+<p>Depending on the datset, you might want it to be either wide or long.
+Most datasets that you download/use will be in wide format, as it is
+easier to interpret and visualize. However, most of the processes
+running behind R using long, and if you’re writing custom functions to
+help with visualizations, it might be required to feed the dataset as a
+long format.</p>
+<p>The way I like to remember the difference between wide and long is
+that the long format repeats variable names in the first column, whereas
+a wide format does not.</p>
+<p>Let’s go back to our Pokemon example and subset it by
+<code>HP, Attack, Defense</code> to make it more manageable.</p>
+<pre class="r"><code>pokemon_wide &lt;- pokemon[, c(&quot;Name&quot;, &quot;HP&quot;, &quot;Attack&quot;, &quot;Defense&quot;)]
+head(pokemon_wide, n = 6);</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   Name                     HP Attack Defense
+##   &lt;chr&gt;                 &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Bulbasaur                45     49      49
+## 2 Ivysaur                  60     62      63
+## 3 Venusaur                 80     82      83
+## 4 VenusaurMega Venusaur    80    100     123
+## 5 Charmander               39     52      43
+## 6 Charmeleon               58     64      58</code></pre>
+<p>Then, convert the table from wide to long using the
+<code>gather</code> function. Note that the <code>gather</code> function
+takes in three arguments: (1) The key (2) the value (3) the variables we
+want to group by (which will be displayed in key).</p>
+<pre class="r"><code>pokemon_long &lt;- pokemon_wide %&gt;% gather(ability, value, HP:Defense);
+head(pokemon_long, n = 6);</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Name                  ability value
+##   &lt;chr&gt;                 &lt;chr&gt;   &lt;dbl&gt;
+## 1 Bulbasaur             HP         45
+## 2 Ivysaur               HP         60
+## 3 Venusaur              HP         80
+## 4 VenusaurMega Venusaur HP         80
+## 5 Charmander            HP         39
+## 6 Charmeleon            HP         58</code></pre>
+<p>To transform a dataset from long to wide, we can use the
+<code>spread</code> function.</p>
+<pre class="r"><code>pokemon_wide1 &lt;- pokemon_long %&gt;% spread(ability, value)
+head(pokemon_wide1, n= 6)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   Name                    Attack Defense    HP
+##   &lt;chr&gt;                    &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+## 1 Abomasnow                   92      75    90
+## 2 AbomasnowMega Abomasnow    132     105    90
+## 3 Abra                        20      15    25
+## 4 Absol                      130      60    65
+## 5 AbsolMega Absol            150      60    65
+## 6 Accelgor                    70      40    80</code></pre>
 </div>
 <div id="a-soft-introduction-into-ggplot" class="section level3">
 <h3>A soft introduction into ggplot</h3>
