@@ -14599,7 +14599,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="AIF360-Implementation-for-New-Dataset">AIF360 Implementation for New Dataset<a class="anchor-link" href="#AIF360-Implementation-for-New-Dataset">&#182;</a></h2><p>Version: 1.0 </br>
 Description: Implementation of AIF360 toolkit on dataset provided by Ambrose and YCAS </br>
-References: <a href="https://nbviewer.org/github/IBM/AIF360/blob/master/examples/tutorial_medical_expenditure.ipynb">Medical Expenditure Tutorial (AIF360)</a> and <a href="https://ambiata.com/blog/2019-12-13-bias-detection-and-mitigation/">AMBIATA Bias detection and mitigation</a></p>
+References: <a href="https://nbviewer.org/github/IBM/AIF360/blob/master/examples/tutorial_medical_expenditure.ipynb">Medical Expenditure Tutorial (AIF360)</a>, <a href="https://ambiata.com/blog/2019-12-13-bias-detection-and-mitigation/">AMBIATA Bias detection and mitigation</a>, <a href="https://towardsdatascience.com/tutorial-breaking-myths-about-ai-fairness-the-case-of-biased-automated-recruitment-9ee9b2ecc3a">&quot;Breaking Myths about AI fairness (Medium Post)</a>, <a href="https://www.oreilly.com/library/view/practical-fairness/9781492075721/ch04.html">Practical Fairness by Aileen Nielsen</a></p>
 
 </div>
 </div>
@@ -15264,11 +15264,10 @@ class="
 <span class="n">sens_attr</span> <span class="o">=</span> <span class="s1">&#39;Sex_1&#39;</span><span class="p">,</span> <span class="s1">&#39;FinancialClass_grp_2&#39;</span>
 
 <span class="c1"># Define the privilged and unprivilged groups</span>
-
 <span class="n">privileged_groups</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Sex_1&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;FinancialClass_grp_2&#39;</span><span class="p">:</span><span class="mi">1</span> <span class="p">}]</span> 
-<span class="c1"># 1 is male in `Sex_1`, </span>
+<span class="c1"># 1 is male in `Sex_1`, 1 is no medicaid in `FinancalClass_grp_2`</span>
 <span class="n">unprivileged_groups</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Sex_1&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;FinancialClass_grp_2&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}]</span> 
-<span class="c1"># 0 is female in `Sex_1`</span>
+<span class="c1"># 0 is female in `Sex_1`, 0 is no medicaid in `FinancalClass_grp_2`</span>
 
 <span class="c1"># Convert to AIF360 dataframe</span>
 <span class="n">df_aif</span> <span class="o">=</span> <span class="n">BinaryLabelDataset</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">label_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;anyrestraint&#39;</span><span class="p">],</span> <span class="n">protected_attribute_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex_1&#39;</span><span class="p">,</span> <span class="s1">&#39;FinancialClass_grp_2&#39;</span><span class="p">])</span>
