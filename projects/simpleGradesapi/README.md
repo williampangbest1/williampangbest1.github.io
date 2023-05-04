@@ -27,3 +27,12 @@ Setting up API Gateway was relatively simple thanks to its simply GUI (*before t
 
 ![apigateway-figure](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_demo.png)
 
+The main takehome message is that you need to link the API to your lambda function, and then setup different routes (if you so choose). I decided to setup a GET and POST route as the GET route is used to fetch data (say making a query from a database stored in a s3 bucket on AWS), and the POST route would be used to write to the database. 
+
+As such, you can call the POST route as well, which I've called `/addGrades`.
+
+<a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/addGrades</a>
+
+This currently does not work as there is nothing to write to the database!
+
+![](![postman-addGrades](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_addGrades.png))
