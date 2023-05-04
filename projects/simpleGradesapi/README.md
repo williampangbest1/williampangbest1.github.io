@@ -8,7 +8,7 @@ The code for the lambda function can be found on [lambda_function.py](https://gi
 
 ### Usage
 To test it out yourself, you can use the below PATH:
-<a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getData</a> . This is configured under the GET route (I also have setup a dummy POST route, more on that later) and is used to fetch data. If you were to click on the link right now, you will get an error that says `{"message":"Not Found"}`. This is because no input arguments have been given and as such this error message was generated. 
+```https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getData```. This is configured under the GET route (I also have setup a dummy POST route, more on that later) and is used to fetch data. If you were to click on the link right now, you will get an error that says `{"message":"Not Found"}`. This is because no input arguments have been given and as such this error message was generated. 
 
 The lambda function is currently configured to take in {key:value} pairs for five students, named `student1`, `student2`, `student3`, `student4`, `student5`. To make it easy to input this information, I suggest using a website such as [Postman](https://www.postman.com), which has a custom GUI that automatically converts the key value pair inputs into HTML arguments (and does many other things, of course). 
 
