@@ -51,6 +51,24 @@ The trickiest part was debugging because the error statements are not very clear
 
 ```{"message":"Internal Server Error"}```
 
+One tool that can help with debugging (in addition to adding breakpoints and running the code sequentially) is to use AWS Cloudwatch.
+
+To understand what the parameters are being received, you can write a simple lambda function that prints out the information being fed in into the Cloudwatch log.
+
+For instance:
+
+```
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    print(event)
+```
+
+We can then check our logs:
+![cloudwatch](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/cloudwatch.png)
+
+
 
 
 
