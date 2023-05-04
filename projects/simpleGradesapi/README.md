@@ -39,5 +39,14 @@ This currently does not work as there is nothing to write to the database! As su
 
 ![postman-addGrades](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_addGrades.png)
 
+### Setting Up Lambda
+Setting up Lambda wasn't too trcky intially, until I realized that getting Python packages (such as pandas) loaded was not as straightfoward as I thought. I intially set up the environment to work with `python 3.10` (the latest release as of writing), but there no inherent support for pandas on Lambda. As such, I had to go download the respective packages myself from Python's website, un-wheel it, put everything into a folder called `python`, then upload it back to Lambda as a custom layer. Even though I followed all the steps recommended online, I was unable to get it working as some dependencies were probably not supported, and as such I gave up. I then realized that for `python 3.9` (and probably lower), AWS offers a pre-loaded layer that allows for Pandas integration. With that figured out, it was only a click of a button to get Pandas working.
+
+![lambda-Pandas](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/lambda_pandas.png)
+
+And with that, I was off to writing code!
+
+### Debugging, CloudWatch
+
 
 
