@@ -110,7 +110,7 @@ This is a bit messy, so you can use a parser such as [this one](https://jsonform
    "isBase64Encoded":false
 }
 ```
-Notice here that we get 
+Notice here that we get keys such as `rawQueryString`, which tells us the query string (analogus to `argv[index]` in C) arguments as well as `rawPath` which tells us which route we called (either GET or POST in our setup). By leveraging these two parameters, I was able to create a control statement that first checks which route is called, and then query the parameters in order to compute the central tendencies. 
 
 
 
