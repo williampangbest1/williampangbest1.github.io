@@ -4,6 +4,8 @@
 ## Overview
 This simple program utilizes Amazon's API gateway and Lambda to perform some tasks (through the Lambda function) and returns a `json` to the client. In this particular example, we're taking in a set of grades and returning some measures of central tendency.
 
+The code for the lambda function can be found on [lambda_function.py](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/lamda_function.py).
+
 ### Usage
 To test it out yourself, you can use the below PATH:
 <a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getData</a> . This is configured under the GET route (I also have setup a dummy POST route, more on that later) and is used to fetch data. If you were to click on the link right now, you will get an error that says `{"message":"Not Found"}`. This is because no input arguments have been given and as such this error message was generated. 
@@ -33,6 +35,6 @@ As such, you can call the POST route as well, which I've called `/addGrades`.
 
 <a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/addGrades</a>
 
-This currently does not work as there is nothing to write to the database!
+This currently does not work as there is nothing to write to the database! As such, you'll get a message that simply says "This has not been implemented yet".
 
 ![](![postman-addGrades](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_addGrades.png))
