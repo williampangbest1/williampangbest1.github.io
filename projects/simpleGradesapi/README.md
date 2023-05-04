@@ -22,3 +22,6 @@ What should be returned is a `json` that contains measures of the central tenden
 
 Feel free to test with other values!
 
+### Setting Up API Gateway
+Setting up API Gateway was relatively simple thanks to its simply GUI (*before that, I was playing with ElasticBeanstalk and spent a lot of time debugging the security permissions through IAM and using the eb-command line interface to upload my app to perform some simple sentiment analysis, but happy to discuss that later*) 
+
