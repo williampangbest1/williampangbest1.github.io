@@ -37,4 +37,7 @@ As such, you can call the POST route as well, which I've called `/addGrades`.
 
 This currently does not work as there is nothing to write to the database! As such, you'll get a message that simply says "This has not been implemented yet".
 
-![](![postman-addGrades](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_addGrades.png))
+![postman-addGrades](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_addGrades.png)
+
+
+
