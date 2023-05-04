@@ -47,6 +47,11 @@ Setting up Lambda wasn't too trcky intially, until I realized that getting Pytho
 And with that, I was off to writing code!
 
 ### Debugging, CloudWatch
+The trickiest part was debugging because the error statements are not very clear, unlike running Python code on an IDE like VSCode. For instance, if you missed a bracket or a comma and try deploying, you would still be able to deploy but will be greeted with this message when you test the URL:
+
+```{"message":"Internal Server Error"}```
+
+
 
 
 
