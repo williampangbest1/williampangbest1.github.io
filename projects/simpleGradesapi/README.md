@@ -12,8 +12,7 @@ The lambda function is currently configured to take in {key:value} pairs for fiv
 
 ![postman-figure](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/postman_demo.png)
 
-You can, of course, entering things manually yourself as well. The query begins after the PATH, followed by a delimiter `?`. The key comes first, followed by the value. For instance, if we want to enter the exam score of `student1` and `student2`, we want to type `PATH?student1=10&student2=50`.
+You can, of course, entering things manually yourself as well. The query begins after the PATH, followed by a delimiter `?`. The key comes first, followed by the value. For instance, if we want to enter the exam score of `student1` and `student2`, we want to type `PATH?student1=10&student2=50`. The entire query used is reproduced below:
 
-```https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getGrades?student1=10&student2=50&student3=100&student4=30&student5=-10```
+<a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getGrades?student1=10&student2=50&student3=100&student4=30&student5=-10</a>
 
-You can, of course, entering things manually yourself 
