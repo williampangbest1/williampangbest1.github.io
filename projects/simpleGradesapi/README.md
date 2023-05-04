@@ -68,8 +68,49 @@ def lambda_handler(event, context):
 We can then check our logs:
 ![cloudwatch](https://github.com/williampangbest1/williampangbest1.github.io/blob/main/projects/simpleGradesapi/img/cloudwatch.png)
 
+This is a bit messy, so you can use a parser such as [this one](https://jsonformatter.curiousconcept.com) from CuriousConcept to make it legible and pretty. 
 
-
+```
+{
+   "version":"2.0",
+   "routeKey":"GET /get",
+   "rawPath":"/get",
+   "rawQueryString":"",
+   "headers":{
+      "accept":"*/*",
+      "accept-encoding":"gzip, deflate, br",
+      "cache-control":"no-cache",
+      "content-length":"0",
+      "host":"9nv5qhfufg.execute-api.us-west-2.amazonaws.com",
+      "postman-token":"[REMOVED]",
+      "user-agent":"PostmanRuntime/7.32.2",
+      "x-amzn-trace-id":"[REMOVED]",
+      "x-forwarded-for":"76.119.158.11",
+      "x-forwarded-port":"443",
+      "x-forwarded-proto":"https"
+   },
+   "requestContext":{
+      "accountId":"[REMOVED]",
+      "apiId":"9nv5qhfufg",
+      "domainName":"9nv5qhfufg.execute-api.us-west-2.amazonaws.com",
+      "domainPrefix":"9nv5qhfufg",
+      "http":{
+         "method":"GET",
+         "path":"/get",
+         "protocol":"HTTP/1.1",
+         "sourceIp":"[REMOVED]",
+         "userAgent":"PostmanRuntime/7.32.2"
+      },
+      "requestId":"EZtXeh4wvHcEJ1A=",
+      "routeKey":"GET /get",
+      "stage":"$default",
+      "time":"04/May/2023:14:35:01 +0000",
+      "timeEpoch":1683210901920
+   },
+   "isBase64Encoded":false
+}
+```
+Notice here that we get 
 
 
 
