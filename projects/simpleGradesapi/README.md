@@ -16,3 +16,9 @@ You can, of course, entering things manually yourself as well. The query begins 
 
 <a>https://aip93x2bi0.execute-api.us-west-2.amazonaws.com/getGrades?student1=10&student2=50&student3=100&student4=30&student5=-10</a>
 
+What should be returned is a `json` that contains measures of the central tendency that has been computed using `numpy`. For the above key value pairs, I got:
+
+`{"Mean": "36.0", "Median": "30.0", "Std": "37.74"}`.
+
+Feel free to test with other values!
+
